@@ -7,13 +7,13 @@ using System.Threading;
 using System.Diagnostics;
 using Speech.Synthesis.Core;
 
-namespace PairProject
+namespace VoyagerProject
 {    
     class Program
     {
         static void Main(string[] args)
         {
-            new PairProject.Game().GameStart() ;
+            new VoyagerProject.Game().GameStart() ;
         }
     }
 }

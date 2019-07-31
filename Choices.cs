@@ -8,10 +8,11 @@ namespace VoyagerProject
     {
         public void Choice()
         {
-            Player playerChoices = new Player();
+            Game playerChoices = new Game();
+            Dice dice = new Dice();
             int choice1;
             int choice2 = 1;
-            int playerLuck = playerChoices.RngDice(choice2);
+            int playerLuck = dice.RngDice(choice2);
             string choice;
             Console.WriteLine("Go left or right?");
             choice = Console.ReadLine();
