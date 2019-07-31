@@ -6,34 +6,34 @@ namespace VoyagerProject
 {
     class Dice
     {
-        public int RngDice(int dice)
-        {
-            string luck;
-            Random rng = new Random();
-            dice = rng.Next(1, 6);
-            switch (dice)
-            {
-                case 1:
-                    Console.Write("the worst");
-                    break;
-                case 2:
-                    Console.Write("bad");
-                    break;
-                case 3:
-                    Console.Write("kinda bad");
-                    break;
-                case 4:
-                    Console.Write("kinda good");
-                    break;
-                case 5:
-                    Console.Write("good");
-                    break;
-                case 6:
-                    Console.Write("the best");
-                    break;
-            }
-            return dice;
+       // public int RngDice(string luck)
+        //{
+            
+        //    Random rng = new Random();
+        //    int dice = rng.Next(1, 6);
+            //switch (dice)
+            //{
+            //    case 1:
+            //        luck = "the worst";
+            //        break;
+            //    case 2:
+            //        luck = "bad";
+            //        break;
+            //    case 3:
+            //        luck = "kinda bad";
+            //        break;
+            //    case 4:
+            //        luck = "kinda good";
+            //        break;
+            //    case 5:
+            //        luck = "good";
+            //        break;
+            //    case 6:
+            //        luck = "the best";
+            //        break;
+            //}
+            //return luck;
 
-        }
+        //}
     }
 }
