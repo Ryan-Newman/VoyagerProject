@@ -8,9 +8,9 @@ using System.Threading;
 
 namespace PairProject
 {
-    class Player
+    class Game
     {
-        public void Game()
+        public void GameStart()
         {
             Story intro = new Story();
             intro.StoryIntro();

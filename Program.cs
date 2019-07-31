@@ -13,7 +13,7 @@ namespace PairProject
     {
         static void Main(string[] args)
         {
-            new PairProject.Player().Game() ;
+            new PairProject.Game().GameStart() ;
         }
     }
 }
