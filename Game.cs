@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Threading;
 
 
-namespace PairProject
+namespace VoyagerProject
 {
     class Game
     {
