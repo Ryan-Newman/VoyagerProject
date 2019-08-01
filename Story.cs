@@ -7,6 +7,16 @@ namespace VoyagerProject
 {
     class Story
     {
+        Choices storyChoice = new Choices();
+        private void TypeEffect(string storyIntro, int sleepTime)
+        {
+            foreach (char a in storyIntro)
+            {
+                    Thread.Sleep(sleepTime);
+                    Console.Write(a);                
+            }
+           
+        }
         
         public void StoryIntro()
         {
@@ -84,34 +94,51 @@ namespace VoyagerProject
         public void StorySpaceStation()
         {
 
+            string storySpaceStation = "You are at the spacestation!";
+            Console.WriteLine(storySpaceStation);
+            storyChoice.ChoiceSpaceShip();
         }
         public void StoryProxima()
         {
-
+            string storyProxima = "You are at Centauri Proxima!";
+            Console.WriteLine(storyProxima);
+            storyChoice.ChoiceProxima();
         }
         public void StoryTrappist()
         {
-
+            string storyTrappist = "You are at Trappist!";
+            Console.WriteLine(storyTrappist);
+            storyChoice.ChoiceTrappist();
         }
-        public void HD()
+        public void StoryHD()
         {
-
+            string storyHD = "You are at HD!";
+            Console.WriteLine(storyHD);
+            storyChoice.ChoiceHD();
         }
-        public void Wolf()
+        public void StoryWolf()
         {
-
+            string storyWolf = "You are at Wolf! HowHowHowllllll!";
+            Console.WriteLine(storyWolf);
+            storyChoice.ChoiceWolf();
         }
-        public void Kapteyn()
+        public void StoryKapteyn()
         {
-
+            string storyKapteyn = "You are on Kapteyn, cheif!";
+            Console.WriteLine(storyKapteyn);
+            storyChoice.ChoiceKapteyn();
         }
-        public void TouCentauri()
+        public void StoryTouCentauri()
         {
-
+            string storyTouCentauri = "You are on Tou Centauri!";
+            Console.WriteLine(storyTouCentauri);
+            storyChoice.ChoiceTouCentauri();
         }
-        public void Earth()
+        public void StoryEarth()
         {
-
+            string storyEarth = "Welcome Home!";
+            Console.WriteLine(storyEarth);
+           // storyChoice.ChoiceEarth();
         }
     }
 }
