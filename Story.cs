@@ -21,7 +21,7 @@ namespace VoyagerProject
             TypeEffect(storyIntroTwo, 50);
             // Sizing(3, 4);
 
-            string storyIntroThree = "\nThe character throws on the closest clothes that he has and stumbles out of his apartment.";
+            string storyIntroThree = "\nThe hero throws on the closest clothes that he has and stumbles out of his apartment.";
             TypeEffect(storyIntroThree, 50);
 
             string storyIntroFour = "\nThe character goes into the elevator in his apartment building and hears the elevator music playing" 
