@@ -8,7 +8,7 @@ namespace VoyagerProject
     class Story
     {
         Choices storyChoice = new Choices();
-        private void TypeEffect(string storyIntro, int sleepTime)
+        public void TypeEffect(string storyIntro, int sleepTime)
         {
             foreach (char a in storyIntro)
             {
@@ -81,15 +81,7 @@ namespace VoyagerProject
         //    }
         //}
 
-        public void TypeEffect(string storyIntro, int sleepTime)
-        {
-            foreach (char a in storyIntro)
-            {                
-                Thread.Sleep(sleepTime);
-                Console.Write(a);
-            }
-         
-        }
+
 
         public void StorySpaceStation()
         {
