@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace VoyagerProject
 {
@@ -36,14 +37,15 @@ namespace VoyagerProject
 
         public void ChoiceProxima()
         {
-            Console.WriteLine("What Choice will you make?");// The user will make a choice left or right // Later this project will have a selector button
-            string choice = Console.ReadLine();
-            if (choice == "left")
+            string asteroidBelt = "Press Spacebar to Push through the asteroid belt";
+            string escortScientist = "Press Enter to escort the scientist";
+            Button(asteroidBelt, escortScientist);
+            if (asteroidBelt == "left")
             {
                 Safe safe = new Safe();
                 safe.SafeToProxima(); // Goes to Safe class and calls the dialogue for the safe adventure
             }
-            else if (choice == "right")
+            else if (escortScientist == "right")
             {
                 Chance chance = new Chance();
                 //dice.RngDice(choice);
@@ -160,7 +162,7 @@ namespace VoyagerProject
             string[] menu = new string[] { chanceButton, safeButton };
 
             ConsoleKeyInfo ckey;
-
+            string selection;
             Console.CursorVisible = false;
             do
             {
@@ -179,6 +181,7 @@ namespace VoyagerProject
                         Console.WriteLine(menu[i]);
                     }
                     Console.ResetColor();
+                        selection = menu[i];
 
                 }
 
@@ -189,34 +192,43 @@ namespace VoyagerProject
                     if (index == menu.Length - 1)
                     {
                         index = 0;
+                        Console.BackgroundColor = ConsoleColor.Blue;
                     }
-                }
-                else
-                {
-                    index++;
+
+                    else
+                    {
+                        index++;
+                    }
                 }
 
-                if (ckey.Key == ConsoleKey.UpArrow)
+                 if (ckey.Key == ConsoleKey.UpArrow)
                 {
-                    if (index <= 0)
+                    if (index == 0)
                     {
                         index = menu.Length - 1;
-                    }
-                }
-                
-                if(ckey.Key == ConsoleKey.Enter && index == 0)
-                    {
-                        Safe safe = new Safe();
-                        safe.SafeToSpaceStation(); // Goes to Safe class and calls the dialogue for the safe adventure
-                    }
-                else if(ckey.Key == ConsoleKey.Enter && index > 0)
-                    {
-                        Chance chance = new Chance();
-                        //dice.RngDice(choice);
-                        chance.ChanceToSpaceStation();
+                        
                     }
                     else
-                    { index--; }
+                    {
+                        index--;
+                    }
+                }
+                if(ckey.Key == ConsoleKey.Enter && menu[index]  == safeButton)
+                {
+                    
+                    Thread.Sleep(1000);
+                    Safe safe = new Safe();
+                    safe.SafeToSpaceStation(); // Goes to Safe class and calls the dialogue for the safe adventure
+                }
+                else if (ckey.Key == ConsoleKey.Enter && menu[index] == chanceButton) //!!! Make Enter do the selection !!!
+                {
+                    
+                    Thread.Sleep(1000);
+                    Chance chance = new Chance();
+                    //dice.RngDice(choice);
+                    chance.ChanceToSpaceStation();
+                }
+
 
                 Console.Clear(); // !!!Bug!!! Erases the former text line
             } while (ckey.Key != ConsoleKey.Escape);
@@ -225,76 +237,4 @@ namespace VoyagerProject
 
     }
 }
-            //Console.Clear();
-            //Boolean running = true;
-            //Console.CursorVisible = false;
-            //int select = 0;
-            //List<Tuple<int, int, string, Boolean>> options = new List<Tuple<int, int, string, Boolean>>
-            //{
-            //    new Tuple<int,int,string,Boolean>(0,0,chanceButton,true),
-            //    new Tuple<int,int,string,Boolean>(0,1,safeButton,false),
-            //};
-            //while (running == true)
-            //{
-            //    foreach(Tuple<int,int,string,Boolean> tupe in options)
-            //    {
-            //        if (tupe.Item4 == true)
-            //        {
-            //            select = options.FindIndex(t => tupe.Item3 == tupe.Item3);
-            //            Console.SetCursorPosition(tupe.Item1, tupe.Item2);
-            //            Console.ForegroundColor = ConsoleColor.Black;
-            //            Console.BackgroundColor = ConsoleColor.White;
-            //            Console.Write(tupe.Item3);
-
-            //        }
-            //        else if(tupe.Item4 == false)
-            //        {
-            //            Console.SetCursorPosition(tupe.Item1, tupe.Item2);
-            //            Console.ForegroundColor = ConsoleColor.White;
-            //            Console.BackgroundColor = ConsoleColor.Black;
-            //            Console.Write(tupe.Item3);
-            //        }
-            //    }
-            //    Console.SetCursorPosition(options[0].Item1, options[0].Item2);
-            //    Console.ForegroundColor = ConsoleColor.White;
-            //    Console.BackgroundColor = ConsoleColor.Black;
-            //    Console.Write("");
-
-            //    string input = Console.ReadKey().Key.ToString();
-            //    if (input == "LeftArrow" && select > 0)
-            //    {
-            //        options[select] = new Tuple<int, int, string, bool>(options[select].Item1, options[select].Item2, options[select].Item3, false);
-            //        select -= 1;
-            //        options[select] = new Tuple<int, int, string, bool>(options[select].Item1, options[select].Item2, options[select].Item3, true);
-            //    }
-            //    else if (input == "LeftArrow" && select == 0)
-            //    {
-            //        options[select] = new Tuple<int, int, string, bool>(options[select].Item1, options[select].Item2, options[select].Item3, false);
-            //        select += 1;
-            //        options[select] = new Tuple<int, int, string, bool>(options[select].Item1, options[select].Item2, options[select].Item3, true);
-
-            //    }
-            //    if (input == "RightArrow" && select < 1)
-            //    {
-            //        options[select] = new Tuple<int, int, string, bool>(options[select].Item1, options[select].Item2, options[select].Item3, false);
-            //        select += 1;
-            //        options[select] = new Tuple<int, int, string, bool>(options[select].Item1, options[select].Item2, options[select].Item3, true);
-            //    }
-            //    else if (input == "RightArrow" && select == 1)
-            //    {
-            //        options[select] = new Tuple<int, int, string, bool>(options[select].Item1, options[select].Item2, options[select].Item3, false);
-            //        select -= 1;
-            //        options[select] = new Tuple<int, int, string, bool>(options[select].Item1, options[select].Item2, options[select].Item3, true);
-
-            //    }
-            //    if (input == "Enter" && select == 0)
-            //    {
-            //        chanceButton = "CHANCE";
-                   
-                    
-            //    }
-            //    if (input == "Enter" && select == 1)
-            //    {
-            //        safeButton = "SAFE";
-                   
-            //    }
+        

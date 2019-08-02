@@ -9,7 +9,7 @@ namespace VoyagerProject
     {
         Story nextStory = new Story();
 
-        public void SafeToStorySpaceStation()
+        public void SafeToSpaceStation()
         {
             string SafeSSOne = " hero- “Roger that Colonel, thank you” ";
             nextStory.TypeEffect(SafeSSOne, 50);
