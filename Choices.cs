@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 
+ 
 namespace VoyagerProject
 {
     class Choices
@@ -33,8 +34,8 @@ namespace VoyagerProject
 
         public void ChoiceTrappist()
         {
-            string chancePathHD = "Chance path to HD";
-            string safePathHD = "Safe path to HD";
+            string chancePathHD = "Investigate abandoned mine on asteroid";
+            string safePathHD = "Travel HD";
             Button(chancePathHD, safePathHD);
         }
 
@@ -133,15 +134,27 @@ namespace VoyagerProject
                     }
                 }
                 if(ckey.Key == ConsoleKey.Enter && menu[index]  == safeButton)
-                {   
+                {
+                  
                     Safe safe = new Safe();
+                    Console.SetBufferSize(1,1);
+                    
+
                     safe.CallSafe(safeButton); // Goes to Safe class and calls the dialogue for the safe adventure
                 }
                 else if (ckey.Key == ConsoleKey.Enter && menu[index] == chanceButton) 
-                {   
+                {
+                    for(int i = 0; i < 4; i++)
+                    {
+                        Console.SetWindowSize(1,1);
+                        Thread.Sleep(50);
+                        Console.SetWindowSize(100, 25);
+
+                    }
                     Chance chance = new Chance();
                     //dice.RngDice(choice);
                     chance.CallChance(chanceButton);
+                   
                 }
 
 

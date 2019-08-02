@@ -18,18 +18,21 @@ namespace VoyagerProject
                     ChanceToProxima();
                     break;
                 case "Push through the asteroid belt":
+                    ChanceToTrappist();
+                    break;
+                case "Investigate abandoned mine on asteroid":
                     ChanceToHD();
                     break;
-                case "Chance path to HD":
+                case "Chance path to Wolf":
                     ChanceToWolf();
                     break;
-                case "Chance path to Wolf":
+                case "Chance path to Kapteyn":
                     ChanceToKapteyn();
                     break;
-                case "Chance path to Kapteyn":
+                case "Chance path to TouCentauri":
                     ChanceToTouCentauri();
                     break;
-                case "Chance path to TouCentauri":
+                case "Chance path to Earth":
                     ChanceToEarth();
                     break;
                 //case "Chance path to Earth":

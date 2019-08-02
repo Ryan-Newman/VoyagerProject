@@ -18,18 +18,21 @@ namespace VoyagerProject
                     SafeToProxima();
                     break;
                 case "Escort the scientist":
-                    SafeToHD();
+                    SafeToTrappist();
                     break;
                 case "Safe path to HD":
+                    SafeToHD();
+                    break;
+                case "Travel Wolf":
                     SafeToWolf();
                     break;
-                case "Safe path to Wolf":
+                case "Safe path to Kapteyn":
                     SafeToKapteyn();
                     break;
-                case "Safe path to Kapteyn":
+                case "Safe path to TouCentauri":
                     SafeToTouCentauri();
                     break;
-                case "Safe path to TouCentauri":
+                case "Safe path to Earth":
                     SafeToEarth();
                     break;
                 //case "Safe path to Earth":
