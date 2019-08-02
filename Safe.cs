@@ -9,6 +9,33 @@ namespace VoyagerProject
     {
         Story nextStory = new Story();
 
+        public void CallSafe(string safeNext)
+        {
+            switch (safeNext)
+
+            {
+                case "Take Cover":
+                    SafeToProxima();
+                    break;
+                case "Escort the scientist":
+                    SafeToHD();
+                    break;
+                case "Safe path to HD":
+                    SafeToWolf();
+                    break;
+                case "Safe path to Wolf":
+                    SafeToKapteyn();
+                    break;
+                case "Safe path to Kapteyn":
+                    SafeToTouCentauri();
+                    break;
+                case "Safe path to TouCentauri":
+                    SafeToEarth();
+                    break;
+                //case "Safe path to Earth":
+            }
+        }
+
         public void SafeToSpaceStation()
         {
             string SafeSSOne = " hero- “Roger that Colonel, thank you” ";

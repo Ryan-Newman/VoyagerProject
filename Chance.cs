@@ -8,6 +8,36 @@ namespace VoyagerProject
     class Chance
     {
         Story nextStory = new Story();
+
+        public void CallChance(string chanceNext)
+        {
+            switch (chanceNext)
+
+            {
+                case "Steal The Ship!":
+                    ChanceToProxima();
+                    break;
+                case "Push through the asteroid belt":
+                    ChanceToHD();
+                    break;
+                case "Chance path to HD":
+                    ChanceToWolf();
+                    break;
+                case "Chance path to Wolf":
+                    ChanceToKapteyn();
+                    break;
+                case "Chance path to Kapteyn":
+                    ChanceToTouCentauri();
+                    break;
+                case "Chance path to TouCentauri":
+                    ChanceToEarth();
+                    break;
+                //case "Chance path to Earth":
+                  //  break;
+                  
+            }
+        }
+
         public void ChanceToSpaceStation()
         {
             Story story = new Story();

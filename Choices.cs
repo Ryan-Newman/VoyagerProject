@@ -18,141 +18,60 @@ namespace VoyagerProject
 
         public void ChoiceSpaceShip()
         {
-           // Console.WriteLine("What Choice will you make?");// The user will make a choice left or right // Later this project will have a selector button
             string stealShip = "Steal The Ship!";
             string takeCover = "Take Cover";
-            Button(stealShip, takeCover);
-            if (stealShip == "chance")
-            {
-                Safe safe = new Safe();
-                safe.SafeToSpaceStation(); // Goes to Safe class and calls the dialogue for the safe adventure
-            }
-            else if (takeCover == "safe")
-            {
-                Chance chance = new Chance();
-                //dice.RngDice(choice);
-                chance.ChanceToSpaceStation();
-            }
+            Button(stealShip, takeCover);           
         }
 
         public void ChoiceProxima()
         {
-            string asteroidBelt = "Press Spacebar to Push through the asteroid belt";
-            string escortScientist = "Press Enter to escort the scientist";
+            string asteroidBelt = "Push through the asteroid belt";
+            string escortScientist = "Escort the scientist";
             Button(asteroidBelt, escortScientist);
-            if (asteroidBelt == "left")
-            {
-                Safe safe = new Safe();
-                safe.SafeToProxima(); // Goes to Safe class and calls the dialogue for the safe adventure
-            }
-            else if (escortScientist == "right")
-            {
-                Chance chance = new Chance();
-                //dice.RngDice(choice);
-                chance.ChanceToProxima();
-            }
+            
         }
 
         public void ChoiceTrappist()
         {
-            Console.WriteLine("What Choice will you make?");// The user will make a choice left or right // Later this project will have a selector button
-            string choice = Console.ReadLine();
-            if (choice == "left")
-            {
-                Safe safe = new Safe();
-                safe.SafeToTrappist(); // Goes to Safe class and calls the dialogue for the safe adventure
-            }
-            else if (choice == "right")
-            {
-                Chance chance = new Chance();
-                //dice.RngDice(choice);
-                chance.ChanceToTrappist();
-            }
+            string chancePathHD = "Chance path to HD";
+            string safePathHD = "Safe path to HD";
+            Button(chancePathHD, safePathHD);
         }
 
         public void ChoiceHD()
         {
-            Console.WriteLine("What Choice will you make?");// The user will make a choice left or right // Later this project will have a selector button
-            string choice = Console.ReadLine();
-            if (choice == "left")
-            {
-                Safe safe = new Safe();
-                safe.SafeToHD(); // Goes to Safe class and calls the dialogue for the safe adventure
-            }
-            else if (choice == "right")
-            {
-                Chance chance = new Chance();
-                //dice.RngDice(choice);
-                chance.ChanceToHD();
-            }
+            string chancePathWolf = "Chance path to Wolf";
+            string safePathWolf = "Safe path to Wolf";
+            Button(chancePathWolf, safePathWolf);
         }
 
         public void ChoiceWolf()
         {
-            Console.WriteLine("What Choice will you make?");// The user will make a choice left or right // Later this project will have a selector button
-            string choice = Console.ReadLine();
-            if (choice == "left")
-            {
-                Safe safe = new Safe();
-                safe.SafeToWolf(); // Goes to Safe class and calls the dialogue for the safe adventure
-            }
-            else if (choice == "right")
-            {
-                Chance chance = new Chance();
-                //dice.RngDice(choice);
-                chance.ChanceToWolf();
-            }
+            string chancePathKapteyn = "Chance path to Kapteyn";
+            string safePathKapteyn = "Safe path to Kapteyn";
+            Button(chancePathKapteyn, safePathKapteyn);
         }
 
         public void ChoiceKapteyn()
         {
-            Console.WriteLine("What Choice will you make?");// The user will make a choice left or right // Later this project will have a selector button
-            string choice = Console.ReadLine();
-            if (choice == "left")
-            {
-                Safe safe = new Safe();
-                safe.SafeToKapteyn(); // Goes to Safe class and calls the dialogue for the safe adventure
-            }
-            else if (choice == "right")
-            {
-                Chance chance = new Chance();
-                //dice.RngDice(choice);
-                chance.ChanceToKapteyn();
-            }
+            string chancePathTouCentauri = "Chance path to TouCentauri";
+            string safePathTouCentauri = "Safe path to TouCentauri";
+            Button(chancePathTouCentauri, safePathTouCentauri);
+            
         }
 
         public void ChoiceTouCentauri()
         {
-            Console.WriteLine("What Choice will you make?");// The user will make a choice left or right // Later this project will have a selector button
-            string choice = Console.ReadLine();
-            if (choice == "left")
-            {
-                Safe safe = new Safe();
-                safe.SafeToTouCentauri(); // Goes to Safe class and calls the dialogue for the safe adventure
-            }
-            else if (choice == "right")
-            {
-                Chance chance = new Chance();
-                //dice.RngDice(choice);
-                chance.ChanceToTouCentauri();
-            }
+            string chancePathEarth = "Chance path to Earth";
+            string safePathEarth = "Safe path to Earth";
+            Button(chancePathEarth, safePathEarth);
         }
 
         public void ChoiceEarth()
         {
-            Console.WriteLine("What Choice will you make?");// The user will make a choice left or right // Later this project will have a selector button
-            string choice = Console.ReadLine();
-            if (choice == "left")
-            {
-                Safe safe = new Safe();
-                safe.SafeToEarth(); // Goes to Safe class and calls the dialogue for the safe adventure
-            }
-            else if (choice == "right")
-            {
-                Chance chance = new Chance();
-                //dice.RngDice(choice);
-                chance.ChanceToEarth();
-            }
+            string chanceEnding = "Attack Planet Wolf Invaders!!!";
+            string safeEnding = "Set up Permanent defense system";
+            Button(chanceEnding, safeEnding);
         }       
 
         public void Button(string chanceButton, string safeButton)
@@ -214,19 +133,15 @@ namespace VoyagerProject
                     }
                 }
                 if(ckey.Key == ConsoleKey.Enter && menu[index]  == safeButton)
-                {
-                    
-                    Thread.Sleep(1000);
+                {   
                     Safe safe = new Safe();
-                    safe.SafeToSpaceStation(); // Goes to Safe class and calls the dialogue for the safe adventure
+                    safe.CallSafe(safeButton); // Goes to Safe class and calls the dialogue for the safe adventure
                 }
-                else if (ckey.Key == ConsoleKey.Enter && menu[index] == chanceButton) //!!! Make Enter do the selection !!!
-                {
-                    
-                    Thread.Sleep(1000);
+                else if (ckey.Key == ConsoleKey.Enter && menu[index] == chanceButton) 
+                {   
                     Chance chance = new Chance();
                     //dice.RngDice(choice);
-                    chance.ChanceToSpaceStation();
+                    chance.CallChance(chanceButton);
                 }
 
 
