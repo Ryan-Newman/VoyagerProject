@@ -11,14 +11,20 @@ namespace VoyagerProject
 
         public void CallSafe(string safeNext)
         {
+            Player sPlayer = new Player();
             switch (safeNext)
 
             {
                 case "Take Cover":
+                    SafeToSpaceStation();
+                    break;
+                case "Travel to Proxima":
                     SafeToProxima();
+                    sPlayer.SafeWarp(4.2);
                     break;
                 case "Escort the scientist":
                     SafeToTrappist();
+                    sPlayer.SafeWarp(4.2);
                     break;
                 case "Safe path to HD":
                     SafeToHD();
@@ -28,10 +34,7 @@ namespace VoyagerProject
                     break;
                 case "Safe path to Kapteyn":
                     SafeToKapteyn();
-                    break;
-                case "Safe path to TouCentauri":
-                    SafeToTouCentauri();
-                    break;
+                    break;               
                 case "Safe path to Earth":
                     SafeToEarth();
                     break;
@@ -229,6 +232,7 @@ namespace VoyagerProject
 
             string SafeSSFifty = "........";
             nextStory.TypeEffect(SafeSSFifty, 1000);
+            nextStory.StoryProxima();
 
 
         }
@@ -260,14 +264,9 @@ namespace VoyagerProject
         {
             string safeToKapteyn = "Dummy Text Kapteyn";
             Console.WriteLine(safeToKapteyn);
-            nextStory.StoryTouCentauri();
-        }
-        public void SafeToTouCentauri()
-        {
-            string safeToTouCentauri = "Dummy Text TouCentauri";
-            Console.WriteLine(safeToTouCentauri);
             nextStory.StoryEarth();
         }
+       
         public void SafeToEarth()
         {
             string safeToEarth = "Home will never be the same again!";

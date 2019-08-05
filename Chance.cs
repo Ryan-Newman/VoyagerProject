@@ -28,10 +28,7 @@ namespace VoyagerProject
                     break;
                 case "Chance path to Kapteyn":
                     ChanceToKapteyn();
-                    break;
-                case "Chance path to TouCentauri":
-                    ChanceToTouCentauri();
-                    break;
+                    break;               
                 case "Chance path to Earth":
                     ChanceToEarth();
                     break;
@@ -162,14 +159,9 @@ namespace VoyagerProject
         {
             string chanceKapteyn = "Dummy text Kapteyn chance";
             Console.WriteLine(chanceKapteyn);
-            nextStory.StoryTouCentauri();
-        }
-        public void ChanceToTouCentauri()
-        {
-            string chanceTouCentauri = "Dummy text TouCentauri chance";
-            Console.WriteLine(chanceTouCentauri);
             nextStory.StoryEarth();
         }
+       
         public void ChanceToEarth()
         {
             string chanceEarth = "There's No Place Like Home!";

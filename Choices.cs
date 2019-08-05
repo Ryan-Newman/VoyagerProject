@@ -112,7 +112,7 @@ namespace VoyagerProject
                     if (index == menu.Length - 1)
                     {
                         index = 0;
-                        Console.BackgroundColor = ConsoleColor.Blue;
+                       // Console.BackgroundColor = ConsoleColor.Blue;
                     }
 
                     else
@@ -134,12 +134,8 @@ namespace VoyagerProject
                     }
                 }
                 if(ckey.Key == ConsoleKey.Enter && menu[index]  == safeButton)
-                {
-                  
+                {                  
                     Safe safe = new Safe();
-                    Console.SetBufferSize(1,1);
-                    
-
                     safe.CallSafe(safeButton); // Goes to Safe class and calls the dialogue for the safe adventure
                 }
                 else if (ckey.Key == ConsoleKey.Enter && menu[index] == chanceButton) 
@@ -149,7 +145,6 @@ namespace VoyagerProject
                         Console.SetWindowSize(1,1);
                         Thread.Sleep(50);
                         Console.SetWindowSize(100, 25);
-
                     }
                     Chance chance = new Chance();
                     //dice.RngDice(choice);

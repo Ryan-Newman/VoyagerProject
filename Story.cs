@@ -8,6 +8,7 @@ namespace VoyagerProject
     class Story
     {
         Choices storyChoice = new Choices();
+        Planet pStories = new Planet();
         public void TypeEffect(string storyIntro, int sleepTime)
         {
             foreach (char a in storyIntro)
@@ -70,50 +71,56 @@ namespace VoyagerProject
         {
 
             string storySpaceStation = "You are at the spacestation!";
-            Console.WriteLine(storySpaceStation);
+            pStories.PlanetStory(storySpaceStation);
             storyChoice.ChoiceSpaceShip();
         }
         public void StoryProxima()
         {
-            string storyProxima = "You are at Centauri Proxima!";
-            Console.WriteLine(storyProxima);
+            string storyProxima = "You are at Proxima!";
+            pStories.PlanetStory(storyProxima);
+            pStories.InGameItems(3, 250, 70, 100, 100);
+            pStories.PlanetDistance(39.72);
             storyChoice.ChoiceProxima();
         }
         public void StoryTrappist()
         {
             string storyTrappist = "You are at Trappist!";
             Console.WriteLine(storyTrappist);
+            pStories.InGameItems(3, 250, 70, 100, 100);
+            pStories.PlanetDistance(44.18);
             storyChoice.ChoiceTrappist();
         }
         public void StoryHD()
         {
             string storyHD = "You are at HD!";
-            Console.WriteLine(storyHD);
+            pStories.PlanetStory(storyHD);
+            pStories.InGameItems(3, 250, 70, 100, 100);
+            pStories.PlanetDistance(23.44);
             storyChoice.ChoiceHD();
         }
         public void StoryWolf()
         {
             string storyWolf = "You are at Wolf! HowHowHowllllll!";
-            Console.WriteLine(storyWolf);
+            pStories.PlanetStory(storyWolf);
+            pStories.InGameItems(3, 250, 70, 100, 100);
+            pStories.PlanetDistance(18.97);
             storyChoice.ChoiceWolf();
         }
         public void StoryKapteyn()
         {
             string storyKapteyn = "You are on Kapteyn, cheif!";
-            Console.WriteLine(storyKapteyn);
+            pStories.PlanetStory(storyKapteyn);
+            pStories.InGameItems(3, 250, 70, 100, 100);
+            pStories.PlanetDistance(12.8);
             storyChoice.ChoiceKapteyn(); 
         }
-        public void StoryTouCentauri()
-        {
-            string storyTouCentauri = "You are on Tou Centauri!";
-            Console.WriteLine(storyTouCentauri);
-            storyChoice.ChoiceTouCentauri();
-        }
+        
         public void StoryEarth()
         {
             string storyEarth = "Welcome Home!";
-            Console.WriteLine(storyEarth);
+            pStories.PlanetStory(storyEarth);
            // storyChoice.ChoiceEarth();
         }
+
     }
 }
