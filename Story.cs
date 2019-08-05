@@ -65,6 +65,7 @@ namespace VoyagerProject
             TypeEffect(storyIntroEleven, 40);
 
             Console.WriteLine("");
+            storyChoice.ChoiceSpaceShip();
         }     
 
         public void StorySpaceStation()

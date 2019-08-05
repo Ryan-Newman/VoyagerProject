@@ -8,6 +8,12 @@ namespace VoyagerProject
 {
     class Choices
     {
+        public static void ClearLine() // deletes the last writeline 
+        {
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
+            Console.Write(new string(' ', Console.WindowWidth));
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
+        }
         public void Choice()
         {
             Game playerChoices = new Game();
@@ -118,6 +124,7 @@ namespace VoyagerProject
                     else
                     {
                         index++;
+                       
                     }
                 }
 
@@ -153,7 +160,7 @@ namespace VoyagerProject
                 }
 
 
-                Console.Clear(); // !!!Bug!!! Erases the former text line
+                ClearLine() ; // !!!Bug!!! Erases the former text line
             } while (ckey.Key != ConsoleKey.Escape);
         }
 
