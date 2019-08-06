@@ -68,7 +68,7 @@ namespace VoyagerProject
 
         public void ChoiceKapteyn()
         {
-            string chancePathEarth = "Chance path to Earth";
+            string chancePathEarth = "\nChance path to Earth";
             string safePathEarth = "Safe path to Earth";
             Button(chancePathEarth, safePathEarth);
 
@@ -147,7 +147,7 @@ namespace VoyagerProject
                 }
                 else if (ckey.Key == ConsoleKey.Enter && menu[index] == chanceButton) 
                 {
-                    for(int i = 0; i < 4; i++)
+                    for(int i = 0; i < 3; i++)
                     {
                         Console.SetWindowSize(1,1);
                         Thread.Sleep(50);
@@ -161,7 +161,7 @@ namespace VoyagerProject
                 }
 
 
-                ClearLine() ; // !!!Bug!!! Erases the former text line
+                ClearLine() ;
             } while (ckey.Key != ConsoleKey.Escape);
         }
 

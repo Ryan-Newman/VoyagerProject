@@ -19,6 +19,20 @@ namespace VoyagerProject
             Choices firstPath = new Choices();
             firstPath.Choice();
         }
+        public void GameEnd()
+        {
+            string ending = "You have returned to earth and it will never be the same! You have one last choice,\nAttack and destroy planet wolf!!!";
+            //if(resources < 3)
+            //{
+            //string badEnding = "The attack on Wolf goes wrong, they have too many warriors,\nEarth was not prepared, which destroyed it!";
+            //}
+            //else
+            //{
+            //string goodEnding = "The attack was successful! Wolf is no longer a threat!\nEarth is better than it's ever been!";
+            //}
+            Console.WriteLine(ending);
+            System.Environment.Exit(0);
+        }
         
     }
  

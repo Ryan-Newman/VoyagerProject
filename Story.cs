@@ -61,7 +61,7 @@ namespace VoyagerProject
             TypeEffect(storyIntroTen, 30);
             Thread.Sleep(1000);
 
-            string storyIntroEleven = "“\n two blocks from here there is a Federation ship leaving the city, if self-preservation is your goal, I suggest you be on it.”";
+            string storyIntroEleven = "“\n two blocks from here there is a Federation ship leaving the city, if self-preservation is your goal, I suggest you be on it.”\n";
             TypeEffect(storyIntroEleven, 40);
 
             Console.WriteLine("\n\n");
@@ -71,7 +71,8 @@ namespace VoyagerProject
         public void StorySpaceStation()
         {
 
-            string storySpaceStation = "You are at the spacestation!";
+            string storySpaceStation = "\nYou are at the spacestation!\n";
+            TypeEffect(storySpaceStation, 30);
 
             //string storySpaceStationOne = "*Door opens*";
             //TypeEffect(storySpaceStationOne, 50);
@@ -190,7 +191,7 @@ namespace VoyagerProject
             //Choice is given to go to distress beacon or remain on course 
 
             pStories.PlanetStory(storySpaceStation);
-            storyChoice.ChoiceSpaceShip();
+            storyChoice.ChoiceSpaceStation();
         }
         public void StoryProxima()
         {
@@ -237,7 +238,7 @@ namespace VoyagerProject
         {
             string storyEarth = "Welcome Home!";
             pStories.PlanetStory(storyEarth);
-           // storyChoice.ChoiceEarth();
+            storyChoice.ChoiceEarth();
         }
 
     }
