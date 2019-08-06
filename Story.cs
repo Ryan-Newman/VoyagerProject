@@ -72,6 +72,123 @@ namespace VoyagerProject
         {
 
             string storySpaceStation = "You are at the spacestation!";
+
+            //string storySpaceStationOne = "*Door opens*";
+            //TypeEffect(storySpaceStationOne, 50);
+
+            //string storySpaceStationTwo = "Donaldson-“Come with us.”";
+            //TypeEffect(storySpaceStationTwo, 50);
+
+            //string storySpaceStationThree = "*The hero stands up and begins walking alongside Dr. Usk and Colonel Donaldson.*";
+            //TypeEffect(storySpaceStationThree, 50);
+
+            //string storySpaceStationFour = "Usk- “Tell me, have you ever piloted a Spacecraft before?”";
+            //TypeEffect(storySpaceStationFour, 50);
+
+            //string storySpaceStationFive = "Hero-“ I was a pilo… ”";
+            //TypeEffect(storySpaceStationFive, 50);
+
+            //string storySpaceStationSix = "Donaldson- “Cut to the chase, we ran the ID we found in your neural lace. You were a fighter pilot callsign Voyager”";
+            //TypeEffect(storySpaceStationSix, 50);
+
+            //string storySpaceStationSeven = "Hero- “Why does any of this matter?”";
+            //TypeEffect(storySpaceStationSeven, 50);
+
+            //string storySpaceStationEight = "Donaldson- “It matters because as a species we have a serious problem on our hands and you as Usk so eloquently put it, “are a creature of opportunity””";
+            //TypeEffect(storySpaceStationEight, 50);
+
+            //string storySpaceStationNine = "Usk- “What the colonel is trying to say is, we need your help.”";
+            //TypeEffect(storySpaceStationNine, 50);
+
+            //string storySpaceStationTen = "Usk- “10 minutes after the initial invasion Kurop enemy forces began targeting all military installations globally with weapons that we have not seen before. ” ";
+            //TypeEffect(storySpaceStationTen, 50);
+
+            //string storySpaceStationEleven = "Donaldson- “The force is scattered to the winds and besides myself you’re one of few remaining fighter pilots we have contact with.”";
+            //TypeEffect(storySpaceStationEleven, 50);
+
+            //string storySpaceStationTwelve = "“……….”";
+            //TypeEffect(storySpaceStationTwelve, 50);
+
+            //string storySpaceStationThirteen = "Hero- “What do you need me to do?”";
+            //TypeEffect(storySpaceStationThirteen, 50);
+
+            //string storySpaceStationFourteen = "Donaldson –“The Kurops have EMP weapons that are capable of chewing right through our shielding our coms with the other colonies has been DOA for the past 8 hours”";
+            //TypeEffect(storySpaceStationFourteen, 50);
+
+            //string storySpaceStationFifteen = "Usk- “We need you to travel to the outer colonies spread the word of Earth’s invasion, enlist all the help you can and retrieve the supplies necessary to make a Havok tactical nuclear device.”";
+            //TypeEffect(storySpaceStationFifteen, 50);
+
+            //string storySpaceStationSixteen = "Hero- “You know this will take me years, even with the warp technology we have”";
+            //TypeEffect(storySpaceStationSixteen, 50);
+
+            //string storySpaceStationSeventeen = "Usk- “The technology you know of… “";
+            //TypeEffect(storySpaceStationSeventeen, 50);
+
+            //string storySpaceStationEighteen = "Usk- “We are outfitting the craft you arrived on with the newest propulsion technology. One of your many Compensations will be age reversal therapy to the youngest age you wish upon your return.”";
+            //TypeEffect(storySpaceStationEighteen, 50);
+
+            //string storySpaceStationNineteen = "Hero- “When will my ship be ready?”";
+            //TypeEffect(storySpaceStationNineteen, 50);
+
+            //string storySpaceStationTwenty = "*Donaldson and Usk in unison*- “Now.”";
+            //TypeEffect(storySpaceStationTwenty, 50);
+
+            //string storySpaceStationTwentyone = "“………”";
+            //TypeEffect(storySpaceStationTwentyone, 50);
+
+            //string storySpaceStationTwentytwo = "*The hero makes his way to the Spacecraft*";
+            //TypeEffect(storySpaceStationTwentytwo, 50);
+
+            //string storySpaceStationTwentythree = "*Men load valuable cargo and supplies into the cargo bay*";
+            //TypeEffect(storySpaceStationTwentythree, 50);
+
+            //string storySpaceStationTwentyfour = "*Usk approaches*";
+            //TypeEffect(storySpaceStationTwentyfour, 50);
+
+            //string storySpaceStationTwentyfive = "Usk- “Supplies are distributed and we have given you assets to trade with the outer colonies in order to make purchases and enlist help. Your first stop will be the Proxima Centauri system.”";
+            //TypeEffect(storySpaceStationTwentyfive, 50);
+
+            //string storySpaceStationTwentysix = "*Usk hands the hero a helmet*";
+            //TypeEffect(storySpaceStationTwentysix, 50);
+
+            //string storySpaceStationTwentyseven = "Usk- “We will be with you throughout your journey”";
+            //TypeEffect(storySpaceStationTwentyseven, 50);
+
+            //string storySpaceStationTwentyEight = "*The hero shakes Usk’s hand and makes his way onto the craft*";
+            //TypeEffect(storySpaceStationTwentyEight, 50);
+
+            //string storySpaceStationTwentynine = "*The hero puts the helmet on, the coms crackle on with the Colonels voice*";
+            //TypeEffect(storySpaceStationTwentynine, 50);
+
+            //string storySpaceStationThirty = "Donaldson-“God speed Voyager”";
+            //TypeEffect(storySpaceStationThirty, 50);
+
+            //string storySpaceStationThirtyone = "“…………””";
+            //TypeEffect(storySpaceStationThirtyone, 50);
+            //Console.Clear();
+
+            //string storySpaceStationThirtytwo = "It has been two days since the Voyager departed the Icarus. \n " +
+            //                                    "preparing the ship and acclimating to cryosleep the Voyager is now ready to travel.”";
+            //TypeEffect(storySpaceStationThirtytwo, 50);
+
+            //string storySpaceStationThirtythree = "Voyager- “Usk? How fast can I get to Proxima Centauri? ”";
+            //TypeEffect(storySpaceStationThirtythree, 50);
+
+            //string storySpaceStationThirtyfour = "Usk- “With the current propulsion device we installed on your craft you will be able to consistently travel at 1.4 Warp Factor.\n" +
+            //                                     " This is assuming the devise is not damaged and is operating at 100% capacity. It is imperative that you take care of the ships engine \n" +
+            //                                     " one wrong move could drop the propulsion devices efficiency and have you traveling through space your entire life. \n " +
+            //                                     "You need to return to us before you reach the age of 60. Once you reach 60 we will no longer be able to reverse the aging process. ”";
+            //TypeEffect(storySpaceStationThirtyfour, 50);
+
+            //string storySpaceStationThirtyfive = "*distress beacon begins ringing*";
+            //TypeEffect(storySpaceStationThirtyfive, 50);
+
+            //string storySpaceStationThirtysix = "Voyager- “I’m picking up a distress beacon should I go and check it out? \n " +
+            //                                     "There may be free loot and someone to help or should I stay on course?”";
+            //TypeEffect(storySpaceStationThirtysix, 50);
+
+            //Choice is given to go to distress beacon or remain on course 
+
             pStories.PlanetStory(storySpaceStation);
             storyChoice.ChoiceSpaceShip();
         }
