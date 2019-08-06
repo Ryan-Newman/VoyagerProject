@@ -8,6 +8,7 @@ namespace VoyagerProject
     class Chance
     {
         Story nextStory = new Story();
+        Planet dice = new Planet();
 
         public void CallChance(string chanceNext)
         {
@@ -15,6 +16,9 @@ namespace VoyagerProject
 
             {
                 case "Steal The Ship!":
+                    ChanceToSpaceStation();
+                    break;
+                case "Answer the distress call":                   
                     ChanceToProxima();
                     break;
                 case "Push through the asteroid belt":
@@ -130,34 +134,37 @@ namespace VoyagerProject
             string ChanceSSTwentysix = " * The Colonel releases his grip *, “This traitor stole my ship, Usk” points at the hero “you’re lucky I haven’t ejected you into space”";
             story.TypeEffect(ChanceSSTwentysix, 50);
 
+            
+            nextStory.StoryProxima();
         }
         public void ChanceToProxima()
         {
-            string chanceProxima = "Dummy Text Spacestation chance";
+            string chanceProxima = "The government of Proxima has asked you to to go to Trappist, risking your ship through asteroid belt.";
             Console.WriteLine(chanceProxima);
+            //RNG Result
             nextStory.StoryTrappist();
         }
         public void ChanceToTrappist()
         {
-            string chanceTrappist = "Dummy Text Trappist chance";
+            string chanceTrappist = "\nYou here some talk about a lucrative asteroid just outside Trappist on the way towards HD\nYou decide the potential is worth the visit!\n";
             Console.WriteLine(chanceTrappist);
             nextStory.StoryHD();
         }
         public void ChanceToHD()
         {
-            string chanceHD = "Dummy Text HD chance";
+            string chanceHD = "\nYou found the scroll on HD in the hidden chest you stumbled over,\nit has coordinates to ancient space ship with untapped goodies. What could go wrong?!?";
             Console.WriteLine(chanceHD);
             nextStory.StoryWolf();
         }
         public void ChanceToWolf()
         {
-            string chanceWolf = "Dummy text Wolf chance";
+            string chanceWolf = "\nYou decided to take on the enemy planet of Wolf, on the way to Wolf you run into the moon of Wolf, named GuardDog.\nGuardDog wants to barter, for the right price you can trade for the destroyer weapon!\n";
             Console.WriteLine(chanceWolf);
             nextStory.StoryKapteyn();
         }
         public void ChanceToKapteyn()
         {
-            string chanceKapteyn = "Dummy text Kapteyn chance";
+            string chanceKapteyn = "\nThe planet Kapteyn is a resort, but to gain access you must have the right items, otherwise you will be kicked off the planet.\n";
             Console.WriteLine(chanceKapteyn);
             nextStory.StoryEarth();
         }

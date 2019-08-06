@@ -64,7 +64,7 @@ namespace VoyagerProject
             string storyIntroEleven = "“\n two blocks from here there is a Federation ship leaving the city, if self-preservation is your goal, I suggest you be on it.”";
             TypeEffect(storyIntroEleven, 40);
 
-            Console.WriteLine("");
+            Console.WriteLine("\n\n");
             storyChoice.ChoiceSpaceShip();
         }     
 

@@ -8,6 +8,20 @@ using System.Threading;
 
 namespace VoyagerProject
 {
+   
+    class Game
+    {
+        
+        public void GameStart()
+        {
+            Story intro = new Story();
+            intro.StoryIntro();
+            Choices firstPath = new Choices();
+            firstPath.Choice();
+        }
+        
+    }
+ 
     class Planet
     {
         public void InGameItems(int Plumbus, int Gold, int Ammo, int Weapons, int Water)
@@ -34,22 +48,27 @@ namespace VoyagerProject
             //var kapteynToEarthDist = 12.8;
             return distanceTo;
         }
-    }
-    class Game
-    {
-        
-        public void GameStart()
+        public void RngDice()
         {
-            Story intro = new Story();
-            intro.StoryIntro();
-            Choices firstPath = new Choices();
-            firstPath.Choice();
+
+            Random rng = new Random();
+            string worstLuck, badLuck, kindaBadLuck, okLuck, goodLuck, bestLuck ;
+            //string dice = rng.Next(worstLuck, badLuck, kindaBadLuck, okLuck, goodLuck, bestLuck);
+            worstLuck = "\nHorrible Luck! \nYou lost 3 resources and your warp drive is only operating at 1.3\n";
+            badLuck = "\nBad Luck!\nYou lost 1 resource and your warp drive is only operating at 1.3\n";
+            kindaBadLuck = "\nLuck isn't the best, Not the worst either!\nYou didn't loose any resources, but your warp drive is only operating at 1.3\n";
+            okLuck = "\nA little luck is better than bad luck!\nYou didn't gain any resources, but your warp drive is boosted to 1.5!\n";
+            goodLuck = "\nGood Luck strikes!\nYou've managed to gain an extra resource, and your warp drive is boosted to 1.5!\n";
+            bestLuck = "\nUnstoppable! Best luck of any!\nYou gained 3 resources and your warp drive is boosted to 1.5!!!\n";
+
+            List<string> luck = new List<string>() {worstLuck,badLuck,kindaBadLuck,okLuck,goodLuck,bestLuck };
+            int luckIndex = rng.Next(luck.Count);
+
+
+            Console.Clear();
+            Console.WriteLine(luck[luckIndex]);
+
         }
-        
-    }
-    class Item
-    {
-       
     }
     class Player
     {

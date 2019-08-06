@@ -18,7 +18,7 @@ namespace VoyagerProject
                 case "Take Cover":
                     SafeToSpaceStation();
                     break;
-                case "Travel to Proxima":
+                case "Travel directly to Proxima":
                     SafeToProxima();
                     sPlayer.SafeWarp(4.2);
                     break;
@@ -29,7 +29,7 @@ namespace VoyagerProject
                 case "Safe path to HD":
                     SafeToHD();
                     break;
-                case "Travel Wolf":
+                case "Safe path to Wolf":
                     SafeToWolf();
                     break;
                 case "Safe path to Kapteyn":
@@ -238,13 +238,13 @@ namespace VoyagerProject
         }
         public void SafeToProxima()
         {
-            string safeToProxima = "Dummy Text Proxima";
+            string safeToProxima = "\nAfter speaking with the governer, a scientist approaches you on the side, and asks you to try out her prototype sheild.\n";
             Console.WriteLine(safeToProxima);
             nextStory.StoryTrappist();
         }
         public void SafeToTrappist()
         {
-            string safeToTrappist = "Dummy Text Trappist";
+            string safeToTrappist = "\nYou are at Trappist, the planet of pure barter. Good or Evil, doesn't matter on Trappist, they just want to do some business!\n";
             Console.WriteLine(safeToTrappist);
             nextStory.StoryHD();
         }

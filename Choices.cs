@@ -17,7 +17,7 @@ namespace VoyagerProject
         public void Choice()
         {
             Game playerChoices = new Game();
-            Dice dice = new Dice();
+            Game dice = new Game();
 
             ChoiceSpaceShip();
 
@@ -27,6 +27,13 @@ namespace VoyagerProject
         {
             string stealShip = "Steal The Ship!";
             string takeCover = "Take Cover";
+            Button(stealShip, takeCover);
+        }
+
+        public void ChoiceSpaceStation()
+        {
+            string stealShip = "Answer the distress call";
+            string takeCover = "Travel directly to Proxima";
             Button(stealShip, takeCover);           
         }
 
@@ -61,18 +68,11 @@ namespace VoyagerProject
 
         public void ChoiceKapteyn()
         {
-            string chancePathTouCentauri = "Chance path to TouCentauri";
-            string safePathTouCentauri = "Safe path to TouCentauri";
-            Button(chancePathTouCentauri, safePathTouCentauri);
-            
-        }
-
-        public void ChoiceTouCentauri()
-        {
             string chancePathEarth = "Chance path to Earth";
             string safePathEarth = "Safe path to Earth";
             Button(chancePathEarth, safePathEarth);
-        }
+
+        }               
 
         public void ChoiceEarth()
         {
@@ -154,7 +154,8 @@ namespace VoyagerProject
                         Console.SetWindowSize(100, 25);
                     }
                     Chance chance = new Chance();
-                    //dice.RngDice(choice);
+                    Planet dice = new Planet();
+                    dice.RngDice();
                     chance.CallChance(chanceButton);
                    
                 }
