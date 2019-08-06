@@ -33,11 +33,10 @@ namespace VoyagerProject
                 case "Chance path to Kapteyn":
                     ChanceToKapteyn();
                     break;               
-                case "\nChance path to Earth":
-                    ChanceToEarth();
-                    break;
-                case "Attack Planet Wolf Invaders!!!":
-                    break;
+                //case "\nChance path to Earth":
+                //    ChanceToEarth();
+                //    break;
+               
                   
             }
         }
@@ -169,11 +168,6 @@ namespace VoyagerProject
             nextStory.StoryKapteyn();
         }
        
-        public void ChanceToEarth()
-        {
-            string chanceEarth = "There's No Place Like Home!";
-            Console.WriteLine(chanceEarth);
-            nextStory.StoryEarth();
-        }
+      
     }
 }

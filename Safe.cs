@@ -35,11 +35,10 @@ namespace VoyagerProject
                 case "Safe path to Kapteyn":
                     SafeToKapteyn();
                     break;               
-                case "Safe path to Earth":
-                    SafeToEarth();
-                    break;
-                case "Set up Permanent defense system":
-                    break;
+                //case "Safe path to Earth":
+                //    SafeToEarth();
+                //    break;
+               
             }
         }
 
@@ -268,11 +267,6 @@ namespace VoyagerProject
             nextStory.StoryKapteyn();
         }
        
-        public void SafeToEarth()
-        {
-            string safeToEarth = "Home will never be the same again!";
-            Console.WriteLine(safeToEarth);
-            nextStory.StoryEarth();
-        }
+       
     }
 }

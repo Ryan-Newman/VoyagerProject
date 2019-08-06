@@ -11,17 +11,18 @@ namespace VoyagerProject
    
     class Game
     {
-        
+        Grid grid = new Grid();
         public void GameStart()
         {
             Story intro = new Story();
+            grid.GridStart();
             intro.StoryIntro();
             Choices firstPath = new Choices();
             firstPath.Choice();
         }
         public void GameEnd()
         {
-            string ending = "You have returned to earth and it will never be the same! You have one last choice,\nAttack and destroy planet wolf!!!";
+            string ending = "You have returned to earth and it will never be the same! You have one last mission,\nAttack and destroy planet wolf!!!";
             //if(resources < 3)
             //{
             //string badEnding = "The attack on Wolf goes wrong, they have too many warriors,\nEarth was not prepared, which destroyed it!";

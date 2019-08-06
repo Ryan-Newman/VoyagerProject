@@ -8,7 +8,7 @@ namespace VoyagerProject
 {
     class Choices
     {
-        public static void ClearLine() // deletes the last writeline 
+        public  void ClearLine() // deletes the last writeline 
         {
             Console.SetCursorPosition(0, Console.CursorTop - 1);
             Console.Write(new string(' ', Console.WindowWidth));
@@ -68,18 +68,12 @@ namespace VoyagerProject
 
         public void ChoiceKapteyn()
         {
-            string chancePathEarth = "\nChance path to Earth";
-            string safePathEarth = "Safe path to Earth";
-            Button(chancePathEarth, safePathEarth);
-
+            Game game = new Game();
+            game.GameEnd();
+          
         }               
 
-        public void ChoiceEarth()
-        {
-            string chanceEnding = "Attack Planet Wolf Invaders!!!";
-            string safeEnding = "Set up Permanent defense system";
-            Button(chanceEnding, safeEnding);
-        }       
+       
 
         public void Button(string chanceButton, string safeButton)
         {
