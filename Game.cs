@@ -39,6 +39,7 @@ namespace VoyagerProject
  
     class Planet
     {
+        Player player = new Player();
         public void InGameItems(int Plumbus, int Gold, int Ammo, int Weapons, int Water)
         {
             Plumbus = 10;
@@ -63,48 +64,75 @@ namespace VoyagerProject
             //var kapteynToEarthDist = 12.8;
             return distanceTo;
         }
-        public void RngDice()
+        public void RngDice(double planetdist)
         {
+            Story storyPlanet = new Story();
 
-            Random rng = new Random();
-            string worstLuck, badLuck, kindaBadLuck, okLuck, goodLuck, bestLuck ;
-            //string dice = rng.Next(worstLuck, badLuck, kindaBadLuck, okLuck, goodLuck, bestLuck);
-            worstLuck = "\nHorrible Luck! \nYou lost 3 resources and your warp drive is only operating at 1.3\n";
-            badLuck = "\nBad Luck!\nYou lost 1 resource and your warp drive is only operating at 1.3\n";
-            kindaBadLuck = "\nLuck isn't the best, Not the worst either!\nYou didn't loose any resources, but your warp drive is only operating at 1.3\n";
-            okLuck = "\nA little luck is better than bad luck!\nYou didn't gain any resources, but your warp drive is boosted to 1.5!\n";
-            goodLuck = "\nGood Luck strikes!\nYou've managed to gain an extra resource, and your warp drive is boosted to 1.5!\n";
-            bestLuck = "\nUnstoppable! Best luck of any!\nYou gained 3 resources and your warp drive is boosted to 1.5!!!\n";
-
-            List<string> luck = new List<string>() {worstLuck,badLuck,kindaBadLuck,okLuck,goodLuck,bestLuck };
-            int luckIndex = rng.Next(luck.Count);
-
-
+            int worstLuck, badLuck, kindaBadLuck, okLuck, goodLuck, bestLuck;
+            worstLuck = -3;
+            badLuck = -2;
+            kindaBadLuck = -1;
+            okLuck = 1;
+            goodLuck = 2;
+            bestLuck = 3;
+            List<int> luck = new List<int>() {worstLuck, badLuck, kindaBadLuck, okLuck, goodLuck, bestLuck};
+            Random rng = new Random();            
+            int luckIndex = luck[rng.Next(luck.Count)];
+            
+            double badWarp = 1.3;
+            double goodWarp = 1.5;
+            
             Console.Clear();
-            Console.WriteLine(luck[luckIndex]);
 
+            if (luckIndex < 1)
+            {
+                player.ChanceWarp(badWarp, planetdist);
+                Console.WriteLine($"Your warp drive is operating at {badWarp}, and you have {luckIndex} item(s) taken from your inventory\n");
+            }
+            else
+            {
+               player.ChanceWarp(goodWarp, planetdist);
+               Console.WriteLine($"Your warp drive is operating at {goodWarp}, and you have {luckIndex} added to your inventory");
+            }
+            
+           // Console.WriteLine(luck[luckIndex]);
+            
         }
+       
     }
     class Player
     {
-        public void HUD(int travelTime)
+        public double Age(double travelTime)
         {
-            int startAge = 18;
-            List<string> inventory = new List<string> { "Plumbus", "Gold", "Ammo", "Weapons", "Water" };
-            
+            double startAge = 18.0;
 
-            travelTime += startAge;
-            if(travelTime > 59)
+
+            double age = startAge + travelTime;
+            if (travelTime > 59)
             {
                 BadEnding();
             }
-            
-            int travelDistance = 0;
-            double warpSpeed = 1.4; // John's Masterpiece!
-            //travelTime = travelDistance + warpSpeed;
-
+            int ageInt = Convert.ToInt32(age);
+            return ageInt;
         }
+        public void Resources(int plumbus, int gold, int ammo, int weapons, int water)
+            {
+            int startInvPlumbus = 1;
+            int currentPlumInv = plumbus + startInvPlumbus;
 
+            int startInvGold = 1;
+            int currentGoldInv = gold + startInvGold;
+
+            int startInvAmmo = 1;
+            int currentAmmoInv = ammo + startInvAmmo;
+
+            int startInvWeapons = 1;
+            int currentWeaponInv = weapons + startInvWeapons;
+
+            int startInvWater = 1;
+            int currentWaterInv = water + startInvWater;
+              
+            }
         private void BadEnding()
         {
             Story pullFromStory = new Story();
@@ -128,14 +156,19 @@ namespace VoyagerProject
 
             // Chance calls the RNG value
             double cFinalResult = cDistanceLY / (Math.Pow(cWarpFactor, 10.0 / 3) + Math.Pow(10 - cWarpFactor, -11.0 / 3));
+            double newAge = Age(cFinalResult);
+            
+            Console.WriteLine($"{cFinalResult} years have passed {newAge} years old");
             return cFinalResult;
 
         }
         public double SafeWarp(double sDistanceLY)
         {
             double sWarpFactor = 1.4;
-           
             double sFinalResult = sDistanceLY / (Math.Pow(sWarpFactor, 10.0 / 3) + Math.Pow(10 - sWarpFactor, -11.0 / 3));
+            double newAge = Age(sFinalResult);
+
+            Console.WriteLine($"{sFinalResult} years have passed, you are {newAge} years old");
             return sFinalResult;
         }       
     }

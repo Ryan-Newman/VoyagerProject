@@ -46,7 +46,7 @@ namespace VoyagerProject
             Story story = new Story();
 
             string ChanceSSOne="The hero watches as Colonel Donaldson and his men run towards the sound of battle.";
-            story.TypeEffect(ChanceSSOne, 50);
+            story.TypeEffect(ChanceSSOne, 5);
 
 
             //string ChanceSSTwo = "hero thinks*- “I doubt the Colonel will mind if I borrow the Hermes”";
@@ -131,7 +131,7 @@ namespace VoyagerProject
             //story.TypeEffect(ChanceSSTwentyfive, 50);
 
             string ChanceSSTwentysix = " * The Colonel releases his grip *, “This traitor stole my ship, Usk” points at the hero “you’re lucky I haven’t ejected you into space”";
-            story.TypeEffect(ChanceSSTwentysix, 50);
+            story.TypeEffect(ChanceSSTwentysix, 5);
 
             
             nextStory.StorySpaceStation();

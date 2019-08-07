@@ -32,9 +32,9 @@ namespace VoyagerProject
 
         public void ChoiceSpaceStation()
         {
-            string stealShip = "Answer the distress call";
-            string takeCover = "Travel directly to Proxima";
-            Button(stealShip, takeCover);           
+            string distressCall = "Answer the distress call";
+            string travelToProxima = "Travel directly to Proxima";
+            Button(distressCall, travelToProxima);           
         }
 
         public void ChoiceProxima()
@@ -149,7 +149,7 @@ namespace VoyagerProject
                     }
                     Chance chance = new Chance();
                     Planet dice = new Planet();
-                    dice.RngDice();
+                   // dice.RngDice();
                     chance.CallChance(chanceButton);
                    
                 }

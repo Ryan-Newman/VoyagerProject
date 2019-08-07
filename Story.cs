@@ -51,18 +51,18 @@ namespace VoyagerProject
 
             string storyIntroEight = "\n Colonel Donaldson yells to the hero";
             TypeEffect(storyIntroEight, 1);
-            Thread.Sleep(1000);
+            Thread.Sleep(1);
 
             string storyIntroNine = "“\n What are you doing here!?”\n";
             TypeEffect(storyIntroNine, 1);
-            Thread.Sleep(1000);
+            Thread.Sleep(1);
 
             string storyIntroTen = "“\n you have to get the hell out of the city!\n”";
-            TypeEffect(storyIntroTen, 30);
-            Thread.Sleep(1000);
+            TypeEffect(storyIntroTen, 3);
+            Thread.Sleep(1);
 
             string storyIntroEleven = "“\n two blocks from here there is a Federation ship leaving the city, if self-preservation is your goal, I suggest you be on it.”\n";
-            TypeEffect(storyIntroEleven, 40);
+            TypeEffect(storyIntroEleven, 4);
                        
             storyChoice.ChoiceSpaceShip();
         }     
@@ -71,7 +71,7 @@ namespace VoyagerProject
         {
 
             string storySpaceStation = "\nYou are at the spacestation!\n";
-            TypeEffect(storySpaceStation, 30);
+            TypeEffect(storySpaceStation, 3);
 
             //string storySpaceStationOne = "*Door opens*";
             //TypeEffect(storySpaceStationOne, 50);
@@ -192,48 +192,71 @@ namespace VoyagerProject
             pStories.PlanetStory(storySpaceStation);
             storyChoice.ChoiceSpaceStation();
         }
+       
         public void StoryProxima()
-        {
+        {           
+            //Opening Text - John's Masterpeice
             string storyProxima = "You are at Proxima!";
+            //Bartering start here
+            pStories.RngDice(4.3);
+            ProximaItems();
             pStories.PlanetStory(storyProxima);
-            pStories.InGameItems(3, 250, 70, 100, 100);
-            pStories.PlanetDistance(39.72);
             storyChoice.ChoiceProxima();
+        }        
+        public void ProximaItems()
+        {
+            pStories.InGameItems(3, 250, 70, 100, 100);
         }
+
+
         public void StoryTrappist()
         {
             string storyTrappist = "You are at Trappist!";
             Console.WriteLine(storyTrappist);
-            pStories.InGameItems(3, 250, 70, 100, 100);
-            pStories.PlanetDistance(44.18);
             storyChoice.ChoiceTrappist();
+        }
+        public double TrappistData()
+        {
+            pStories.InGameItems(3, 250, 70, 100, 100);
+            return pStories.PlanetDistance(44.18);
         }
         public void StoryHD()
         {
             string storyHD = "You are at HD!";
             pStories.PlanetStory(storyHD);
-            pStories.InGameItems(3, 250, 70, 100, 100);
-            pStories.PlanetDistance(23.44);
             storyChoice.ChoiceHD();
+        }
+        public double HDData()
+        {
+            pStories.InGameItems(3, 250, 70, 100, 100);
+         return pStories.PlanetDistance(23.44);
+
         }
         public void StoryWolf()
         {
             string storyWolf = "You are at Wolf! HowHowHowllllll!";
             pStories.PlanetStory(storyWolf);
-            pStories.InGameItems(3, 250, 70, 100, 100);
-            pStories.PlanetDistance(18.97);
             storyChoice.ChoiceWolf();
+        }
+        public double WolfData()
+        {
+            pStories.InGameItems(3, 250, 70, 100, 100);
+            return pStories.PlanetDistance(18.97);
         }
         public void StoryKapteyn()
         {
             string storyKapteyn = "You are on Kapteyn, cheif!";
             pStories.PlanetStory(storyKapteyn);
-            pStories.InGameItems(3, 250, 70, 100, 100);
-            pStories.PlanetDistance(12.8);
             storyChoice.ChoiceKapteyn(); 
         }
-        
-      
+        public double KapteynData()
+        {
+            pStories.InGameItems(3, 250, 70, 100, 100);
+            return pStories.PlanetDistance(12.8);
+
+        }
+
+
 
     }
 }
