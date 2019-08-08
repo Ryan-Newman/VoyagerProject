@@ -92,7 +92,7 @@ namespace VoyagerProject
     class Player
     {
         Choices choice = new Choices();
-        public void Inventory(int plumbus, int gold, int ammo, int weapons, int water)
+        public void Inventory()
             {
             List<int> money = new List<int> { 100 };
             List<int> plumbusInv = new List<int> { 1 };
@@ -106,10 +106,10 @@ namespace VoyagerProject
             List<int> waterInv = new List<int> { 1 };
             //waterInv.Add();
             Console.WriteLine("\nYou have");
-            Console.WriteLine($"Money: {money.Sum()}\nPlumbus: {plumbusInv.Sum()}\nGold: {goldInv.Sum()}\nAmmo: {ammoInv.Sum()}\nWeapons: {weaponsInv.Sum()}\nWater: {waterInv.Sum()}");
-            BuySell("\nBuy", "Sell");
+            Console.WriteLine($"Money: {money.Sum()}\nPlumbus: {plumbusInv.Sum()}\nGold: {goldInv.Sum()}\nAmmo: {ammoInv.Sum()}\nWeapons: {weaponsInv.Sum()}\nWater: {waterInv.Sum()}\n");
+            BuySell("Buy", "Sell", 2);
             }
-        public void BuySell(string buy, string sell)
+        public void BuySell(string buy, string sell, int menuItems)
         {
             int index = 0;
 
@@ -120,7 +120,7 @@ namespace VoyagerProject
             Console.CursorVisible = false;
             do
             {
-                for (int i = 0; i < menu.Length; i++)
+                for (int i = 0; i < menuItems; i++)
                 {
                     if (i == index)
                     {
@@ -136,7 +136,6 @@ namespace VoyagerProject
                     }
                     Console.ResetColor();
                     selection = menu[i];
-
                 }
 
                 ckey = Console.ReadKey();
@@ -146,13 +145,12 @@ namespace VoyagerProject
                     if (index == menu.Length - 1)
                     {
                         index = 0;
+                       
                         // Console.BackgroundColor = ConsoleColor.Blue;
                     }
-
                     else
-                    {
+                    {                        
                         index++;
-
                     }
                 }
 
@@ -170,21 +168,14 @@ namespace VoyagerProject
                 }
                 if (ckey.Key == ConsoleKey.Enter && menu[index] == sell)
                 {
-                    Safe safe = new Safe();
-                    safe.CallSafe(sell); // Goes to Safe class and calls the dialogue for the safe adventure
+                    //Safe safe = new Safe();
+                    Inventory();
+                    //safe.CallSafe(sell); // Goes to Safe class and calls the dialogue for the safe adventure
                 }
                 else if (ckey.Key == ConsoleKey.Enter && menu[index] == buy)
-                {
-                    for (int i = 0; i < 3; i++)
-                    {
-                        Console.SetWindowSize(1, 1);
-                        Thread.Sleep(50);
-                        Console.SetWindowSize(100, 25);
-                    }
-                    Chance chance = new Chance();
-                    Planet dice = new Planet();
-                    // dice.RngDice();
-                    chance.CallChance(buy);
+                {                    
+                    MerchantResources();
+                    
                 }
                 choice.ClearLine();
             } while (ckey.Key != ConsoleKey.Escape);
@@ -241,7 +232,7 @@ namespace VoyagerProject
             Console.WriteLine(gameOver);
             pullFromStory.TypeEffect(gameOver, 1000);
         }
-        public void MerchantResources(int plumbus, int gold, int ammo, int weapons, int water)
+        public void MerchantResources()
         {
             Random rng = new Random();
             int value = rng.Next(500);
@@ -253,11 +244,10 @@ namespace VoyagerProject
             int waterVal = rng.Next(500);
 
             Console.WriteLine($"\nThe value of plumbus: {plumbusVal}\nGold: {goldVal}\nAmmo: {ammoVal}\nWeapons: {weaponsVal}\nWater: {waterVal}\n");
-            Console.WriteLine("Buy or Sell?");
-            Inventory(plumbusVal, goldVal, ammoVal, weaponsVal, waterVal);
+            //Console.WriteLine("Buy");
             
-           
-
+            //Inventory(plumbusVal, goldVal, ammoVal, weaponsVal, waterVal);
+            
         }
     }
     

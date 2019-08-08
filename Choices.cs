@@ -95,14 +95,12 @@ namespace VoyagerProject
 
                         Console.WriteLine(menu[i]);
                     }
-
                     else
                     {
                         Console.WriteLine(menu[i]);
                     }
-                    Console.ResetColor();
+                        Console.ResetColor();
                         selection = menu[i];
-
                 }
 
                 ckey = Console.ReadKey();
@@ -114,20 +112,16 @@ namespace VoyagerProject
                         index = 0;
                        // Console.BackgroundColor = ConsoleColor.Blue;
                     }
-
                     else
                     {
-                        index++;
-                       
+                        index++;                       
                     }
                 }
-
                  if (ckey.Key == ConsoleKey.UpArrow)
                 {
                     if (index == 0)
                     {
-                        index = menu.Length - 1;
-                        
+                        index = menu.Length - 1;                        
                     }
                     else
                     {

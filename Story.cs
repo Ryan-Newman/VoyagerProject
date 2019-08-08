@@ -201,8 +201,8 @@ namespace VoyagerProject
             string storyProxima = "You are at Proxima!";
             //Bartering start here
             planet.RngDice(4.3);
-            
-            player.MerchantResources(3, 250, 70, 100, 100);
+            player.Inventory();
+            player.MerchantResources();
 
             planet.PlanetStory(storyProxima);
             storyChoice.ChoiceProxima();
@@ -216,7 +216,7 @@ namespace VoyagerProject
             
             Console.WriteLine(storyTrappist);
             storyChoice.ChoiceTrappist();
-            player.MerchantResources(0,1,2,3,4);
+            player.MerchantResources();
         }
 
         
@@ -224,9 +224,9 @@ namespace VoyagerProject
         public void StoryHD()
         {
             string storyHD = "You are at HD!";
-            planet.RngDice(23.44);
+            planet.RngDice(23.44);            
+            player.MerchantResources();
             
-            player.MerchantResources(1, 2, 3, 4, 5);
             planet.PlanetStory(storyHD);
             storyChoice.ChoiceHD();
         }       
@@ -234,7 +234,7 @@ namespace VoyagerProject
         public void StoryWolf()
         {
             string storyWolf = "You are at Wolf! HowHowHowllllll!";
-            player.MerchantResources(2, 3, 4, 5, 6);
+            player.MerchantResources();
             planet.PlanetStory(storyWolf);
             storyChoice.ChoiceWolf();
         }
@@ -243,7 +243,7 @@ namespace VoyagerProject
         {
             string storyKapteyn = "You are on Kapteyn, cheif!";
             planet.RngDice(12.8);
-            player.MerchantResources(3, 4, 5, 6, 7);
+            player.MerchantResources();
             planet.PlanetStory(storyKapteyn);
             storyChoice.ChoiceKapteyn(); 
         }
