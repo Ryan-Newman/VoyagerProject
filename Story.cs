@@ -8,7 +8,9 @@ namespace VoyagerProject
     class Story
     {
         Choices storyChoice = new Choices();
-        Planet pStories = new Planet();
+        Planet planet = new Planet();
+        Player player = new Player();
+        
         public void TypeEffect(string storyIntro, int sleepTime)
         {
             foreach (char a in storyIntro)
@@ -190,7 +192,7 @@ namespace VoyagerProject
 
            
 
-            pStories.PlanetStory(storySpaceStation);
+            planet.PlanetStory(storySpaceStation);
             storyChoice.ChoiceSpaceStation();
         }
        
@@ -230,11 +232,7 @@ namespace VoyagerProject
             pStories.PlanetStory(storyProxima);
             storyChoice.ChoiceProxima();
         }        
-        public void ProximaItems()
-        {
-            pStories.InGameItems(3, 250, 70, 100, 100);
-        }
-
+        
 
         public void StoryTrappist()
         {
@@ -267,12 +265,11 @@ namespace VoyagerProject
             Console.WriteLine("\n");
             Console.WriteLine(storyTrappist);
             storyChoice.ChoiceTrappist();
+            player.MerchantResources();
         }
-        public double TrappistData()
-        {
-            pStories.InGameItems(3, 250, 70, 100, 100);
-            return pStories.PlanetDistance(44.18);
-        }
+
+        
+                
         public void StoryHD()
         {
             Console.Clear();
@@ -308,13 +305,8 @@ namespace VoyagerProject
             Console.WriteLine("\n");
             pStories.PlanetStory(storyHD);
             storyChoice.ChoiceHD();
-        }
-        public double HDData()
-        {
-            pStories.InGameItems(3, 250, 70, 100, 100);
-         return pStories.PlanetDistance(23.44);
-
-        }
+        }       
+        
         public void StoryWolf()
         {
             Console.Clear();
@@ -342,11 +334,7 @@ namespace VoyagerProject
             pStories.PlanetStory(storyWolf);
             storyChoice.ChoiceWolf();
         }
-        public double WolfData()
-        {
-            pStories.InGameItems(3, 250, 70, 100, 100);
-            return pStories.PlanetDistance(18.97);
-        }
+        
         public void StoryKapteyn()
         {
             Console.Clear();
@@ -374,14 +362,5 @@ namespace VoyagerProject
             pStories.PlanetStory(storyKapteyn);
             storyChoice.ChoiceKapteyn(); 
         }
-        public double KapteynData()
-        {
-            pStories.InGameItems(3, 250, 70, 100, 100);
-            return pStories.PlanetDistance(12.8);
-
-        }
-
-
-
     }
 }
