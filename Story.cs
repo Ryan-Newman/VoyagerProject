@@ -8,7 +8,9 @@ namespace VoyagerProject
     class Story
     {
         Choices storyChoice = new Choices();
-        Planet pStories = new Planet();
+        Planet planet = new Planet();
+        Player player = new Player();
+        
         public void TypeEffect(string storyIntro, int sleepTime)
         {
             foreach (char a in storyIntro)
@@ -189,7 +191,7 @@ namespace VoyagerProject
 
             //Choice is given to go to distress beacon or remain on course 
 
-            pStories.PlanetStory(storySpaceStation);
+            planet.PlanetStory(storySpaceStation);
             storyChoice.ChoiceSpaceStation();
         }
        
@@ -198,65 +200,52 @@ namespace VoyagerProject
             //Opening Text - John's Masterpeice
             string storyProxima = "You are at Proxima!";
             //Bartering start here
-            pStories.RngDice(4.3);
-            ProximaItems();
-            pStories.PlanetStory(storyProxima);
+            planet.RngDice(4.3);
+            
+            player.MerchantResources(3, 250, 70, 100, 100);
+
+            planet.PlanetStory(storyProxima);
             storyChoice.ChoiceProxima();
         }        
-        public void ProximaItems()
-        {
-            pStories.InGameItems(3, 250, 70, 100, 100);
-        }
-
+        
 
         public void StoryTrappist()
         {
             string storyTrappist = "You are at Trappist!";
+            planet.RngDice(44.18);
+            
             Console.WriteLine(storyTrappist);
             storyChoice.ChoiceTrappist();
+            player.MerchantResources(0,1,2,3,4);
         }
-        public double TrappistData()
-        {
-            pStories.InGameItems(3, 250, 70, 100, 100);
-            return pStories.PlanetDistance(44.18);
-        }
+
+        
+                
         public void StoryHD()
         {
             string storyHD = "You are at HD!";
-            pStories.PlanetStory(storyHD);
+            planet.RngDice(23.44);
+            
+            player.MerchantResources(1, 2, 3, 4, 5);
+            planet.PlanetStory(storyHD);
             storyChoice.ChoiceHD();
-        }
-        public double HDData()
-        {
-            pStories.InGameItems(3, 250, 70, 100, 100);
-         return pStories.PlanetDistance(23.44);
-
-        }
+        }       
+        
         public void StoryWolf()
         {
             string storyWolf = "You are at Wolf! HowHowHowllllll!";
-            pStories.PlanetStory(storyWolf);
+            player.MerchantResources(2, 3, 4, 5, 6);
+            planet.PlanetStory(storyWolf);
             storyChoice.ChoiceWolf();
         }
-        public double WolfData()
-        {
-            pStories.InGameItems(3, 250, 70, 100, 100);
-            return pStories.PlanetDistance(18.97);
-        }
+        
         public void StoryKapteyn()
         {
             string storyKapteyn = "You are on Kapteyn, cheif!";
-            pStories.PlanetStory(storyKapteyn);
+            planet.RngDice(12.8);
+            player.MerchantResources(3, 4, 5, 6, 7);
+            planet.PlanetStory(storyKapteyn);
             storyChoice.ChoiceKapteyn(); 
         }
-        public double KapteynData()
-        {
-            pStories.InGameItems(3, 250, 70, 100, 100);
-            return pStories.PlanetDistance(12.8);
-
-        }
-
-
-
     }
 }
