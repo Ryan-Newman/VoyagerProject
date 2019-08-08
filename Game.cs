@@ -99,9 +99,10 @@ namespace VoyagerProject
     class Player
     {
         Choices choice = new Choices();
-        public void Inventory()
+        public void Inventory(int addMoney)
             {
             List<int> money = new List<int> { 100 };
+            money.Add(addMoney);
             List<int> plumbusInv = new List<int> { 1 };
             //plumbusInv.Add();
             List<int> goldInv = new List<int> { 1 };
@@ -176,20 +177,20 @@ namespace VoyagerProject
                 if (ckey.Key == ConsoleKey.Enter && menu[index] == sell)
                 {
                     //Safe safe = new Safe();
-                    Inventory();
+                    Inventory(0);
                     //safe.CallSafe(sell); // Goes to Safe class and calls the dialogue for the safe adventure
                 }
                 else if (ckey.Key == ConsoleKey.Enter && menu[index] == buy)
                 {                    
                     MerchantResources();
-                    MerchantMenu("Plumbus","Gold","Ammo","Weapons","Water",5);
+                    MerchantMenu("Plumbus","Gold","Ammo","Weapons","Water",4);
                     
                 }
                 choice.ClearLine();
             } while (ckey.Key != ConsoleKey.Escape);
         }
 
-        private void MerchantMenu(string plumbusSelect, string goldSelect, string ammoSelect, string weaponsSelect, string waterSelect, int menuItems)
+        public void MerchantMenu(string plumbusSelect, string goldSelect, string ammoSelect, string weaponsSelect, string waterSelect, int menuItems)
         {  
             
                 int index = 0;
@@ -249,17 +250,25 @@ namespace VoyagerProject
                     }
                     if (ckey.Key == ConsoleKey.Enter && menu[index] == "Plumbus")
                     {
-                        //Safe safe = new Safe();
-                        Inventory();
-                        //safe.CallSafe(sell); // Goes to Safe class and calls the dialogue for the safe adventure
+                    Inventory(0) ;
                     }
                     else if (ckey.Key == ConsoleKey.Enter && menu[index] == "Gold")
                     {
-                        MerchantResources();
-                        
-
+                    Inventory(0);
                     }
-                    choice.ClearLine();
+                    else if (ckey.Key == ConsoleKey.Enter && menu[index] == "Ammo")
+                    {
+                    Inventory(0);
+                    }
+                    else if (ckey.Key == ConsoleKey.Enter && menu[index] == "Weapons")
+                    {
+                    Inventory(0);
+                    }
+                    else if (ckey.Key == ConsoleKey.Enter && menu[index] == "Water")
+                    {
+                    Inventory(0);
+                    }
+                choice.ClearLine();
                 } while (ckey.Key != ConsoleKey.Escape);
             
         }
@@ -322,16 +331,25 @@ namespace VoyagerProject
             int value = rng.Next(500);
 
             int plumbusVal = rng.Next(500);
+            StoredValues(plumbusVal);
             int goldVal = rng.Next(500);
+            StoredValues(goldVal);
             int ammoVal = rng.Next(500);
+            StoredValues(ammoVal);
             int weaponsVal = rng.Next(500);
+            StoredValues(weaponsVal);
             int waterVal = rng.Next(500);
+            StoredValues(waterVal);
 
             Console.WriteLine($"\nThe value of plumbus: {plumbusVal}\nGold: {goldVal}\nAmmo: {ammoVal}\nWeapons: {weaponsVal}\nWater: {waterVal}\n");
             //Console.WriteLine("Buy");
             
-            //Inventory(plumbusVal, goldVal, ammoVal, weaponsVal, waterVal);
-            
+            //Inventory(plumbusVal, goldVal, ammoVal, weaponsVal, waterVal);            
+        }
+
+        public void StoredValues(int itemVal)
+        {
+            Console.WriteLine(itemVal);
         }
     }
     

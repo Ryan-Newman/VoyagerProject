@@ -203,8 +203,8 @@ namespace VoyagerProject
 
             string storyProxima = "You are at Proxima! \n";
             
-            pStories.RngDice(4.3);
-            ProximaItems();
+            planet.RngDice(4.3);
+            
 
             string storyProximaOne = "*Cryotube hisses from air rushing in* \n ";
             TypeEffect(storyProximaOne, 1);
@@ -229,7 +229,12 @@ namespace VoyagerProject
 
 
             Console.WriteLine("\n");
-            pStories.PlanetStory(storyProxima);
+            player.Age(4.2);
+            player.BuySell("Buy","Sell", 2);
+            
+            
+            Console.WriteLine("\n");
+            planet.PlanetStory(storyProxima);
             storyChoice.ChoiceProxima();
         }        
         
@@ -303,7 +308,7 @@ namespace VoyagerProject
 
 
             Console.WriteLine("\n");
-            pStories.PlanetStory(storyHD);
+            planet.PlanetStory(storyHD);
             storyChoice.ChoiceHD();
         }       
         
@@ -331,7 +336,7 @@ namespace VoyagerProject
 
 
             Console.WriteLine("\n");
-            pStories.PlanetStory(storyWolf);
+            planet.PlanetStory(storyWolf);
             storyChoice.ChoiceWolf();
         }
         
@@ -359,7 +364,7 @@ namespace VoyagerProject
 
 
             Console.WriteLine("\n");
-            pStories.PlanetStory(storyKapteyn);
+            planet.PlanetStory(storyKapteyn);
             storyChoice.ChoiceKapteyn(); 
         }
     }
