@@ -326,6 +326,12 @@ namespace VoyagerProject
             string storyWolfFour = "Usk-“Once you are ready to leave the planet, be sure to find Captain Ward and explain Earth’s need for help.”\n";
             TypeEffect(storyWolfFour, 1);
 
+            string storyWolfFive = "“Good Afternoon, we have been expecting you. I understand that you are here to talk about an attack on Earth?” I can assure you that any information and weapons you need I will provide it. \n" +
+                                      " As you travel to Kapteyn and alert them of the attack on Earth, Speak with Mr. Elliot he will be able to assist you with providing the Havoc tactical nuke. This bomb will be more than capable for taking out the Kurop mothership that is on its way to Earth!\n " +
+                                        "There are two ways you can get to Kapteyn. There is a moon close by that you can slingshot your ship off if it is done right you will be able to travel faster, if not you will waste time. If you’re not a risk taker you can take the longer route and just push your ship to its normal warp speed.\n";
+
+            TypeEffect(storyWolfFive, 1);
+
             //Bartering start here
 
 
@@ -353,6 +359,14 @@ namespace VoyagerProject
 
             string storyKapteynFour = "Usk-“Once you are ready to leave the planet, be sure to find Mr. Elliot he has been waiting for you and will provide you with the havoc tactical nuke.” \n";
             TypeEffect(storyKapteynFour, 1);
+
+            string storyKapteynFive = "“Good Afternoon, I have been expecting you. I have heard about your journey and am excited to meet you. I understand you are looking for a weapon to destroy the Kurop mothership.You are in luck.We have just the weapon.It is called the havoc tactical nuke and it took years to develop.\n" +
+                                      " As you travel to back Earth with the nuke please be careful not to damage the device, I will alert Proxima and they will begin pushing the large gathering of troops to earth to fight the Kurops on the ground.\n " +
+                                        "If you are willing to take a risk, we have an experimental warp drive that may push your ship faster back to Earth. Or you can take the safe route and just push your ship to its normal warp speed.”\n";
+            TypeEffect(storyKapteynFive, 1);
+
+
+           
 
             //Bartering start here
 
