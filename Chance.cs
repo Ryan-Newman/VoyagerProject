@@ -45,93 +45,93 @@ namespace VoyagerProject
         {
             Story story = new Story();
 
-            string ChanceSSOne="The hero watches as Colonel Donaldson and his men run towards the sound of battle.";
-            story.TypeEffect(ChanceSSOne, 5);
+            string ChanceSSOne="The hero watches as Colonel Donaldson and his men run towards the sound of battle. \n";
+            story.TypeEffect(ChanceSSOne, 1);
 
 
-            //string ChanceSSTwo = "hero thinks*- “I doubt the Colonel will mind if I borrow the Hermes”";
-            //story.TypeEffect(ChanceSSTwo, 50);
+            string ChanceSSTwo = "hero thinks*- “I doubt the Colonel will mind if I borrow the Hermes”\n";
+            story.TypeEffect(ChanceSSTwo, 1);
 
-            //string ChanceSSThree = " * enters the rear hatch and moves quickly to the cockpit.";
-            //story.TypeEffect(ChanceSSThree, 50);
+            string ChanceSSThree = " * enters the rear hatch and moves quickly to the cockpit. \n";
+            story.TypeEffect(ChanceSSThree, 1);
 
-            //string ChanceSSFour = " Shaking from adrenaline the hero tries to get the ship off the ground, \n" +
-            //                      " but is it the red button or green switch? ";
-            //story.TypeEffect(ChanceSSFour, 50);
+            string ChanceSSFour = " Shaking from adrenaline the hero tries to get the ship off the ground, \n" +
+                                  " but is it the red button or green switch? ";
+            story.TypeEffect(ChanceSSFour, 1);
 
-            ////artificial choice both buttons will strat the craft.
+            //artificial choice both buttons will strat the craft.
 
-            //string ChanceSSFive = "* The ship begins hovering.";
-            //story.TypeEffect(ChanceSSFive, 50);
+            string ChanceSSFive = "* The ship begins hovering.\n";
+            story.TypeEffect(ChanceSSFive, 1);
 
-            //string ChanceSSSix = " hero thinks- “At least my Conscription if finally paying off. ”";
-            //story.TypeEffect(ChanceSSSix, 50);
+            string ChanceSSSix = " hero thinks- “At least my Conscription if finally paying off. ”\n";
+            story.TypeEffect(ChanceSSSix, 1);
 
-            //string ChanceSSSeven = " The hero points the ship to the sky and launches. ";
-            //story.TypeEffect(ChanceSSSeven, 50);
+            string ChanceSSSeven = " The hero points the ship to the sky and launches. \n";
+            story.TypeEffect(ChanceSSSeven, 1);
 
-            //string ChanceSSEight = ".....";
-            //story.TypeEffect(ChanceSSEight, 50);
+            string ChanceSSEight = ".....\n";
+            story.TypeEffect(ChanceSSEight, 1);
 
-            //string ChanceSSNine = " A familiar voice comes over the radio ";
-            //story.TypeEffect(ChanceSSNine, 50);
+            string ChanceSSNine = " A familiar voice comes over the radio \n";
+            story.TypeEffect(ChanceSSNine, 1);
 
-            //string ChanceSSTen = " After traveling for an hour the radio begins to crackle with life.";
-            //story.TypeEffect(ChanceSSTen, 50);
+            string ChanceSSTen = " After traveling for an hour the radio begins to crackle with life.\n";
+            story.TypeEffect(ChanceSSTen, 1);
 
-            //string ChanceSSEleven = "Donaldson- “You son of * fizz fizzzzz * I tell you how to save yourself \n " +
-            //                        "and you steal *fizz fizzzzz* ship to thank me?! ”";
-            //story.TypeEffect(ChanceSSEleven, 50);
+            string ChanceSSEleven = "Donaldson- “You son of * fizz fizzzzz * I tell you how to save yourself \n " +
+                                    "and you steal *fizz fizzzzz* ship to thank me?! ”\n";
+            story.TypeEffect(ChanceSSEleven, 1);
 
-            //string ChanceSSTwelve = "“I’ll ..crackle.. you a choice return the Hermes to the Icarus Space Station... \n " +
-            //                   "or I will launch a … fizz fizzzzz… missile your way and introduce you to the vacuum of space”";
-            //story.TypeEffect(ChanceSSTwelve, 50);
+            string ChanceSSTwelve = "“I’ll ..crackle.. you a choice return the Hermes to the Icarus Space Station... \n " +
+                               "or I will launch a … fizz fizzzzz… missile your way and introduce you to the vacuum of space”\n";
+            story.TypeEffect(ChanceSSTwelve, 1);
 
-            //string ChanceSSThirteen = "Hero thinks*- “Should I gun it? I could make it out of the solar system before the Colonel \n" +
-            //                          " could even push the launch button?  ";
-            //story.TypeEffect(ChanceSSThirteen, 50);
-            //Console.Clear();
+            string ChanceSSThirteen = "Hero thinks*- “Should I gun it? I could make it out of the solar system before the Colonel \n" +
+                                      " could even push the launch button?  \n";
+            story.TypeEffect(ChanceSSThirteen, 1);
+            Console.Clear();
 
-            //string ChanceSSFourteen = ".......";
-            //story.TypeEffect(ChanceSSFourteen, 150);
+            string ChanceSSFourteen = ".......\n";
+            story.TypeEffect(ChanceSSFourteen, 1);
 
-            //string ChanceSSFifteen = "* Grabs the hand mic *, “We’ll do it your way Colonel. \n " +
-            //                      "Setting course for the Icarus.”";
-            //story.TypeEffect(ChanceSSFifteen, 50);
+            string ChanceSSFifteen = "* Grabs the hand mic *, “We’ll do it your way Colonel. \n " +
+                                  "Setting course for the Icarus.”\n";
+            story.TypeEffect(ChanceSSFifteen, 1);
 
-            //string ChanceSSSixteen = "...";
-            //story.TypeEffect(ChanceSSSixteen, 150);
+            string ChanceSSSixteen = "...\n";
+            story.TypeEffect(ChanceSSSixteen, 1);
 
-            //string ChanceSSSeventeen = " The hero reaches the station and begins docking procedures.";
-            //story.TypeEffect(ChanceSSSeventeen, 50);
+            string ChanceSSSeventeen = " The hero reaches the station and begins docking procedures.\n";
+            story.TypeEffect(ChanceSSSeventeen, 1);
 
-            //string ChanceSSEighteen = "A voice comes over the Hermes PA, “Docking procedure commencing please step away from the airlock” ";
-            //story.TypeEffect(ChanceSSEighteen, 50);
+            string ChanceSSEighteen = "A voice comes over the Hermes PA, “Docking procedure commencing please step away from the airlock”\n ";
+            story.TypeEffect(ChanceSSEighteen, 1);
 
-            //string ChanceSSNineteen = " * The final whistles of air rushing into the vacuum sound *";
-            //story.TypeEffect(ChanceSSNineteen, 50);
+            string ChanceSSNineteen = " * The final whistles of air rushing into the vacuum sound *\n";
+            story.TypeEffect(ChanceSSNineteen, 1);
 
-            //string ChanceSSTwenty = " hero thinks, “I should have just pushed it to warp 9 and made the jump to the Wolf system ”";
-            //story.TypeEffect(ChanceSSTwenty, 50);
+            string ChanceSSTwenty = " hero thinks, “I should have just pushed it to warp 9 and made the jump to the Wolf system ”\n";
+            story.TypeEffect(ChanceSSTwenty, 1);
 
-            //string ChanceSSTwentyone = " The airlock opens and Donaldson rushes through the door and grabs the hero by the neck.";
-            //story.TypeEffect(ChanceSSTwentyone, 20);
+            string ChanceSSTwentyone = " The airlock opens and Donaldson rushes through the door and grabs the hero by the neck.\n";
+            story.TypeEffect(ChanceSSTwentyone, 1);
 
-            //string ChanceSSTwentytwo = " Donaldson- “I should kill you right now! \n" +
-            //                   " I lost a man trying to fight our way back to the fleet because of your little stunt!”";
-            //story.TypeEffect(ChanceSSTwentytwo, 50);
+            string ChanceSSTwentytwo = " Donaldson- “I should kill you right now! \n" +
+                               " I lost a man trying to fight our way back to the fleet because of your little stunt!”\n";
+            story.TypeEffect(ChanceSSTwentytwo, 1);
 
-            //string ChanceSSTwentythree = "“yeah.... should have warped”";
-            //story.TypeEffect(ChanceSSTwentythree, 70);
+            string ChanceSSTwentythree = "“yeah.... should have warped”\n";
+            story.TypeEffect(ChanceSSTwentythree, 1);
 
-            //string ChanceSSTwentyfour = "A man in a lab coat rounds the corner and stares at the Colonel.";
-            //story.TypeEffect(ChanceSSTwentyfour, 50);
+            string ChanceSSTwentyfour = "A man in a lab coat rounds the corner and stares at the Colonel.\n";
+            story.TypeEffect(ChanceSSTwentyfour, 1);
 
-            //string ChanceSSTwentyfive = " “Colonel.. I think, at this moment, we can use just about all the friends we can get” ";
-            //story.TypeEffect(ChanceSSTwentyfive, 50);
+            string ChanceSSTwentyfive = " “Colonel.. I think, at this moment, we can use just about all the friends we can get” \n";
+            story.TypeEffect(ChanceSSTwentyfive, 1);
 
-            string ChanceSSTwentysix = " * The Colonel releases his grip *, “This traitor stole my ship, Usk” points at the hero “you’re lucky I haven’t ejected you into space”";
-            story.TypeEffect(ChanceSSTwentysix, 5);
+            string ChanceSSTwentysix = " * The Colonel releases his grip *, “This traitor stole my ship, Usk” points at the hero “you’re lucky I haven’t ejected you into space”\n";
+            story.TypeEffect(ChanceSSTwentysix, 1);
 
             
             nextStory.StorySpaceStation();

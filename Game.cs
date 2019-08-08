@@ -16,6 +16,13 @@ namespace VoyagerProject
         {
             Story intro = new Story();
             grid.GridStart();
+
+            //Console.WindowWidth = Console.BufferWidth;
+            int consoleHeight = Console.LargestWindowHeight;
+            int consoleWidth = Console.LargestWindowWidth;
+            Console.WindowHeight = consoleHeight;
+            Console.WindowWidth = consoleWidth;
+
             intro.StoryIntro();
             Choices firstPath = new Choices();
             firstPath.Choice();
@@ -34,6 +41,7 @@ namespace VoyagerProject
             Console.WriteLine(ending);
             System.Environment.Exit(0);
         }
+
         
     }
  
@@ -105,14 +113,25 @@ namespace VoyagerProject
         public double Age(double travelTime)
         {
             double startAge = 18.0;
+            double currentAge = 0;
 
+            if (startAge == 18)
+            {
+                currentAge = travelTime + startAge;
+                startAge++;
+            }
+            else
+            {
+                currentAge += travelTime;    
+            }
+             
+         
 
-            double age = startAge + travelTime;
             if (travelTime > 59)
             {
                 BadEnding();
             }
-            int ageInt = Convert.ToInt32(age);
+            int ageInt = Convert.ToInt32(currentAge);
             return ageInt;
         }
         public void Resources(int plumbus, int gold, int ammo, int weapons, int water)
