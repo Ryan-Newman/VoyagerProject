@@ -13,6 +13,7 @@ namespace VoyagerProject
     {
         static void Main(string[] args)
         {
+            
             new VoyagerProject.Game().GameStart() ;
         }
     }

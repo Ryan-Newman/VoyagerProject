@@ -16,6 +16,13 @@ namespace VoyagerProject
         {
             Story intro = new Story();
             grid.GridStart();
+
+            //Console.WindowWidth = Console.BufferWidth;
+            int consoleHeight = Console.LargestWindowHeight;
+            int consoleWidth = Console.LargestWindowWidth;
+            Console.WindowHeight = consoleHeight;
+            Console.WindowWidth = consoleWidth;
+
             intro.StoryIntro();
             Choices firstPath = new Choices();
             firstPath.Choice();

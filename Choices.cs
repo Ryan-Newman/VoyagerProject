@@ -135,12 +135,12 @@ namespace VoyagerProject
                 }
                 else if (ckey.Key == ConsoleKey.Enter && menu[index] == chanceButton) 
                 {
-                    for(int i = 0; i < 3; i++)
-                    {
-                        Console.SetWindowSize(1,1);
-                        Thread.Sleep(50);
-                        Console.SetWindowSize(100, 25);
-                    }
+                    //for(int i = 0; i < 3; i++) // Commented out so the screen size remains the same throughout the entire game.!!!!!!!!!!!!!!!!!!!!John
+                    //{
+                    //    Console.SetWindowSize(1,1);
+                    //    Thread.Sleep(50);
+                    //    Console.SetWindowSize(100, 25);
+                    //}
                     Chance chance = new Chance();
                     Planet dice = new Planet();
                    // dice.RngDice();
