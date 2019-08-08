@@ -175,11 +175,88 @@ namespace VoyagerProject
                 else if (ckey.Key == ConsoleKey.Enter && menu[index] == buy)
                 {                    
                     MerchantResources();
+                    MerchantMenu("Plumbus","Gold","Ammo","Weapons","Water",5);
                     
                 }
                 choice.ClearLine();
             } while (ckey.Key != ConsoleKey.Escape);
         }
+
+        private void MerchantMenu(string plumbusSelect, string goldSelect, string ammoSelect, string weaponsSelect, string waterSelect, int menuItems)
+        {  
+            
+                int index = 0;
+
+                string[] menu = new string[] { plumbusSelect, goldSelect, ammoSelect, weaponsSelect, waterSelect };
+
+                ConsoleKeyInfo ckey;
+                string selection;
+                Console.CursorVisible = false;
+                do
+                {
+                    for (int i = 0; i < menuItems; i++)
+                    {
+                        if (i == index)
+                        {
+                            Console.BackgroundColor = ConsoleColor.Gray;
+                            Console.ForegroundColor = ConsoleColor.Black;
+
+                            Console.WriteLine(menu[i]);
+                        }
+
+                        else
+                        {
+                            Console.WriteLine(menu[i]);
+                        }
+                        Console.ResetColor();
+                        selection = menu[i];
+                    }
+
+                    ckey = Console.ReadKey();
+
+                    if (ckey.Key == ConsoleKey.DownArrow)
+                    {
+                        if (index == menu.Length - 1)
+                        {
+                            index = 0;
+
+                            // Console.BackgroundColor = ConsoleColor.Blue;
+                        }
+                        else
+                        {
+                            index++;
+                        }
+                    }
+
+                    if (ckey.Key == ConsoleKey.UpArrow)
+                    {
+                        if (index == 0)
+                        {
+                            index = menu.Length - 1;
+
+                        }
+                        else
+                        {
+                            index--;
+                        }
+                    }
+                    if (ckey.Key == ConsoleKey.Enter && menu[index] == "Plumbus")
+                    {
+                        //Safe safe = new Safe();
+                        Inventory();
+                        //safe.CallSafe(sell); // Goes to Safe class and calls the dialogue for the safe adventure
+                    }
+                    else if (ckey.Key == ConsoleKey.Enter && menu[index] == "Gold")
+                    {
+                        MerchantResources();
+                        
+
+                    }
+                    choice.ClearLine();
+                } while (ckey.Key != ConsoleKey.Escape);
+            
+        }
+
         public double Age(double travelTime)
         {           
             List<double> addAge = new List<double>() { 18.0 };
