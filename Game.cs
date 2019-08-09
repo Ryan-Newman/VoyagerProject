@@ -115,7 +115,7 @@ namespace VoyagerProject
             //waterInv.Add();
             Console.WriteLine("\nYou have");
             Console.WriteLine($"Money: {money.Sum()}\nPlumbus: {plumbusInv.Sum()}\nGold: {goldInv.Sum()}\nAmmo: {ammoInv.Sum()}\nWeapons: {weaponsInv.Sum()}\nWater: {waterInv.Sum()}\n");
-            BuySell("Buy", "Sell", 2);
+            //BuySell("Buy", "Sell", 2);
             }
         public void BuySell(string buy, string sell, int menuItems)
         {
@@ -191,7 +191,9 @@ namespace VoyagerProject
         }
 
         public void MerchantMenu(string plumbusSelect, string goldSelect, string ammoSelect, string weaponsSelect, string waterSelect, int menuItems)
-        {  
+        {
+            Planet planet = new Planet();
+            Story story = new Story();
             
                 int index = 0;
 
@@ -268,6 +270,10 @@ namespace VoyagerProject
                     {
                     Inventory(0);
                     }
+                    else if (ckey.Key == ConsoleKey.Backspace)
+                {
+                    ;
+                }
                 choice.ClearLine();
                 } while (ckey.Key != ConsoleKey.Escape);
             
@@ -318,12 +324,12 @@ namespace VoyagerProject
 
             string badending = "The Voyager looks down at wrinkled hands and realizes that the mission is over and that Humanity is destined for a dark future";
             pullFromStory.TypeEffect(badending, 50);
-            Thread.Sleep(1000);
+            Thread.Sleep(1);
             Console.Clear();
             Console.SetCursorPosition((Console.WindowWidth - gameOver.Length) / 2, Console.CursorTop);
             
             Console.WriteLine(gameOver);
-            pullFromStory.TypeEffect(gameOver, 1000);
+            pullFromStory.TypeEffect(gameOver, 10);
         }
         public void MerchantResources()
         {
